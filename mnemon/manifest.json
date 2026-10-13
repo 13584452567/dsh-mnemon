@@ -1,0 +1,47 @@
+{
+  "format": "mnemonpack",
+  "version": 1,
+  "scope": "full",
+  "exportedAt": "2026-10-13T02:06:34.685Z",
+  "source": {
+    "plugin": "dsh-mnemon",
+    "pluginVersion": "0.1.0"
+  },
+  "components": [
+    "runtime",
+    "documents",
+    "memory-spaces"
+  ],
+  "summary": [
+    {
+      "component": "runtime",
+      "files": 3,
+      "bytes": 36,
+      "items": 0
+    },
+    {
+      "component": "documents",
+      "files": 1,
+      "bytes": 38,
+      "items": 0
+    },
+    {
+      "component": "memory-spaces",
+      "files": 1,
+      "bytes": 35,
+      "items": 0
+    }
+  ],
+  "sync": {
+    "channel": "git",
+    "branch": "mnemon-sync",
+    "subdir": "mnemon/",
+    "pushedAt": "2026-10-13T02:06:34.685Z",
+    "machine": {
+      "id": "4cb76af2-6331-41a5-ba4c-fa41f7b2d1f6",
+      "label": "MetaBook01",
+      "createdAt": "2026-10-13T02:03:57.535Z"
+    },
+    "tombstones": []
+  }
+}
