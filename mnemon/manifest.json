@@ -2,10 +2,10 @@
   "format": "mnemonpack",
   "version": 1,
   "scope": "full",
-  "exportedAt": "2026-10-13T02:06:34.685Z",
+  "exportedAt": "2026-10-23T11:04:41.897Z",
   "source": {
     "plugin": "dsh-mnemon",
-    "pluginVersion": "0.1.0"
+    "pluginVersion": "0.5.34"
   },
   "components": [
     "runtime",
@@ -36,11 +36,11 @@
     "channel": "git",
     "branch": "mnemon-sync",
     "subdir": "mnemon/",
-    "pushedAt": "2026-10-13T02:06:34.685Z",
+    "pushedAt": "2026-10-23T11:04:41.897Z",
     "machine": {
-      "id": "4cb76af2-6331-41a5-ba4c-fa41f7b2d1f6",
+      "id": "c57dea22-65c0-44c5-8dee-c86617fe61b6",
       "label": "MetaBook01",
-      "createdAt": "2026-10-13T02:03:57.535Z"
+      "createdAt": "2026-10-23T11:01:02.652Z"
     },
     "tombstones": []
   }
