@@ -1,4 +1,152 @@
 {
   "version": 1,
-  "entries": []
+  "entries": [
+    {
+      "content": "UotanStudio EROFS: upstream erofs-utils C reference tree is vendored at reference/erofs-upstream/erofs-utils-master/; prior audit docs live in reference/local/out/ and reference/local/probe/ (erofs gap-analysis + upstream alignment matrix).",
+      "target": "memory",
+      "importance": "normal",
+      "created_at": "2026-10-13T08:54:43.821Z",
+      "updated_at": "2026-10-13T08:54:43.821Z",
+      "origin": {
+        "machine": "4cb76af2-6331-41a5-ba4c-fa41f7b2d1f6",
+        "label": "MetaBook01",
+        "at": "2026-10-13T08:54:43.821Z"
+      }
+    },
+    {
+      "content": "UotanStudio EROFS QEMU harness (reference/local/probe) runs in WSL distro **Alpine**, not Debian: the GKI 5.10.107 x86_64 kernel lives at /opt/uotan-erofs-gki/prebuilts/gki-5.10-x86_64/kernel-5.10 only in Alpine (Debian's /opt is empty). Alpine has qemu-system-x86_64 11.1.1, gcc 15.2.0, erofs-utils 1.9.4, cpio, gzip. Repo path maps to /mnt/e/UotanStudio/reference/local/probe (the checked-in qemu-erofs.sh still references the stale /mnt/e/UotanStudio/local/probe).",
+      "target": "memory",
+      "importance": "critical",
+      "created_at": "2026-10-13T12:07:39.209Z",
+      "updated_at": "2026-10-13T12:07:39.209Z",
+      "origin": {
+        "machine": "4cb76af2-6331-41a5-ba4c-fa41f7b2d1f6",
+        "label": "MetaBook01",
+        "at": "2026-10-13T12:07:39.209Z"
+      }
+    },
+    {
+      "content": "WSL Alpine gotchas that silently break the UotanStudio EROFS guest harness: (1) unprivileged `mknod` fails with EPERM (\"Operation not permitted\"); device nodes need `sudo -n mknod`. qemu-erofs.sh swallowed this via `2>/dev/null`, so /dev/kmsg and loop nodes were never created and the guest produced zero output. (2) /bin/sh is busybox ash and does NOT expand braces, so `mkdir -p root/{proc,sys,mnt,lib,dev}` creates one literal directory; use `#!/bin/bash`. (3) A stale root-owned /tmp/uotan-erofs-qemu from an earlier run makes rm/mkdir fail; remove it with `sudo -n rm -rf` first.",
+      "target": "memory",
+      "importance": "critical",
+      "created_at": "2026-10-13T12:07:39.223Z",
+      "updated_at": "2026-10-13T12:07:39.223Z",
+      "origin": {
+        "machine": "4cb76af2-6331-41a5-ba4c-fa41f7b2d1f6",
+        "label": "MetaBook01",
+        "at": "2026-10-13T12:07:39.223Z"
+      }
+    },
+    {
+      "content": "UotanStudio EROFS alignment finished & verified (2026-10-13): fixed D1 (AdviseAll 0xF->0x1F, deriving from EROFS_I_NLINK_1_BIT), D2 (device-slot 48bit gating), D3 (s_blocks includes extra devices), D4 (compact-index BIG_PCLUSTER_1/2 consistency reject), D5 (ChunkFormatAll=0x7F), plus two fidelity gaps: NlinkOneAdviseSupported and source xattrs are now persisted in ErofsRebuildParameters/ErofsRebuildInode and replayed (resolved entries, since a shared ibody references the source's shared area). Gates: full solution build 0 errors; Firmware tests 3610 total/0 failed/0 errors/2 UOTAN_EROFS_CORPUS skips; whitespace+style format clean for all touched files; GKI 5.10.107 QEMU interop PASS on the repo's own ErofsBuilder output via `wsl -d Alpine bash erofs-verify.sh --producer dotnet`. D6 interlaced pcluster remains read-only and is documented plus fail-loud guarded.",
+      "target": "memory",
+      "importance": "critical",
+      "created_at": "2026-10-13T14:22:42.573Z",
+      "updated_at": "2026-10-13T17:34:09.976Z",
+      "origin": {
+        "machine": "4cb76af2-6331-41a5-ba4c-fa41f7b2d1f6",
+        "label": "MetaBook01",
+        "at": "2026-10-13T17:34:09.976Z"
+      }
+    },
+    {
+      "content": "UotanStudio EROFS GKI interop ACCEPTANCE PASSED (2026-10-13) for the repo's own ErofsBuilder output after the D1-D5 fixes: `wsl.exe -d Alpine -e bash -lc 'cd /mnt/e/UotanStudio/reference/local/probe && bash erofs-verify.sh --producer dotnet'` reports HARNESS RESULT: PASS on GKI 5.10.107 — CONTENT_OK=9/MISMATCH=0/UNREADABLE=0, REMOUNT_CONTENT_OK=9, xattrs user.k1/user.long/user.nested/security.selinux read by the kernel, NONASCII_COUNT=1, writes rejected errno=30. The --negative-control run detects deliberate corruption (MISMATCH=2, DIFF_AT=100000), proving the content check is load-bearing.",
+      "target": "memory",
+      "importance": "critical",
+      "created_at": "2026-10-13T15:46:16.536Z",
+      "updated_at": "2026-10-13T15:46:16.536Z",
+      "origin": {
+        "machine": "4cb76af2-6331-41a5-ba4c-fa41f7b2d1f6",
+        "label": "MetaBook01",
+        "at": "2026-10-13T15:46:16.536Z"
+      }
+    },
+    {
+      "content": "QRD7150 EDL root cause (verified): the 9008 device's BusReportedDeviceDesc is \"QUSB_BULK_CID:040F_SN:9806169E\" (Qualcomm BULK endpoints), but on this host it is bound by oem36.inf / service qcwdfserial into Class=Ports and exposed as COM12. UotanStudio's EdlSerialPortFallback then talks to it via System.IO.Ports.SerialPort (CDC-ACM). That path can move bytes but does NOT reach the Sahara command endpoint, which is why the target replies to any input with a constant 16-byte packet and never parses HELLO_RESPONSE. Other EDL tools succeed on this same device because they open the raw BULK endpoints directly. Two 9008 instances exist (40000030 -> COM12 Status OK; 20000030 -> COM9 Status Unknown). Fix is to rebind the 9008 interface to WinUSB (libwdi's winusb_generic_device.inf is already installed, USBDevice class) or libusb-win32/libusbK so the native USB backend claims the interface instead of the serial fallback.",
+      "target": "memory",
+      "importance": "critical",
+      "created_at": "2026-10-13T17:10:24.244Z",
+      "updated_at": "2026-10-13T17:10:24.244Z",
+      "origin": {
+        "machine": "4cb76af2-6331-41a5-ba4c-fa41f7b2d1f6",
+        "label": "MetaBook01",
+        "at": "2026-10-13T17:10:24.244Z"
+      }
+    },
+    {
+      "content": "UotanStudio.Compress 门面异常语义陷阱：CompressionService.CreateDecompressionStream 返回的惰性读取器不包装异常。CompressionFormat.Deflate 走 SharpCompress，损坏数据抛 SharpCompress.Compressors.Deflate.ZlibException；CompressionFormat.Gzip 走 BCL GZipStream，抛 System.IO.InvalidDataException。两者都不是 CompressionException（该类型 internal，仅 InternalsVisibleTo 到 Firmware/Tests/Benchmarks，宿主 UotanStudio 无法 catch）。截断输入在两种实现上都静默返回部分输出而不抛异常。调用方 catch 必须按实际格式分别覆盖对应类型，不能想当然用 CompressionException。",
+      "target": "memory",
+      "importance": "critical",
+      "created_at": "2026-10-14T17:13:36.439Z",
+      "updated_at": "2026-10-14T17:13:36.439Z",
+      "origin": {
+        "machine": "4cb76af2-6331-41a5-ba4c-fa41f7b2d1f6",
+        "label": "MetaBook01",
+        "at": "2026-10-14T17:13:36.439Z"
+      }
+    },
+    {
+      "content": "UotanStudio perf audit (2026-10-16, static scan + existing evidence/hot-path-ranking.json): production LINQ = 4537 call sites but only 195 (4.3%) inside loop bodies, and those are ~88 UI/ViewModel + 68 Firmware ordering/grouping (OrderBy for deterministic archive/DT/ext4 output) — NOT data-plane. The top-ranked hot paths are LINQ-free and already span-based: SparseReader.cs (rank 60) has 0 LINQ, Ext4Builder/ErofsBuilder per-pcluster loops use Math.Min only. UotanStudio.Comm is exemplary: 0 BitConverter, 69 files with BinaryPrimitives, 38 span-based protocol files, only 7 cold-path LINQ-in-loop. Zero stackalloc-in-loop repo-wide (no StackOverflow risk). ZLinq is NOT a dependency and would not help since LINQ is off the hot paths. Remaining real headroom is allocation-on-return-value APIs, not LINQ: ErofsParser.ReadFileBytes (MemoryStream+ToArray, ErofsParser.cs:591-596, duplicated at :811-841 and :1307-1309).",
+      "target": "memory",
+      "importance": "normal",
+      "created_at": "2026-10-15T19:49:18.431Z",
+      "updated_at": "2026-10-15T19:49:18.431Z",
+      "origin": {
+        "machine": "4cb76af2-6331-41a5-ba4c-fa41f7b2d1f6",
+        "label": "MetaBook01",
+        "at": "2026-10-15T19:49:18.431Z"
+      }
+    },
+    {
+      "content": "UotanStudio perf optimizations applied (2026-10-16, 7 files, +322/-96): (1) ErofsParser.ReadFileBytes sizes buffer from inode instead of MemoryStream+ToArray double copy — measured ErofsGcBaseline Walk allocated 1,569,696 KB vs UnpackToStream 6,069 KB (259x gap) from this copy path. (2)(3) ErofsBuilder.Layout now ArrayPool-rents one inode buffer across WriteInodes and the PclusterFrameKey hash buffer (was new byte[] per inode/pcluster). (4) F2fsCompression uses span CopyTo. (5) Lz4DestinationCodec gained RentState/ReturnState + a state-taking Encode overload — MUST clear the whole context before each reuse or the fast path derives an invalid base from stale currentOffset (found via AccessViolation). (6) ZstdBlockCodec caches one Compressor per level (CompressorCache). (7) Crc16Arc is now table-driven (256 entries). Each was proven equivalent with a throwaway probe comparing against pristine git HEAD: Crc16Arc 16508 checks/0 fail + ARC vector 0xBB3D; Lzo 200000 checks/0 fail (note the core does mutate output on failure, but the original public API also discarded it — compare PUBLIC API to public API); zstd 560 checks/0 fail; lz4 900 checks/0 fail. NOTE: Lzo local functions cannot capture Span params (CS9108) — pass them explicitly with ref cursors. TreatWarningsAsErrors + CS1591 make missing XML docs or ambiguous cref build BREAKS; use prose not cref for overloaded methods.",
+      "target": "memory",
+      "importance": "normal",
+      "created_at": "2026-10-16T09:07:33.835Z",
+      "updated_at": "2026-10-16T09:07:33.835Z",
+      "origin": {
+        "machine": "4cb76af2-6331-41a5-ba4c-fa41f7b2d1f6",
+        "label": "MetaBook01",
+        "at": "2026-10-16T09:07:33.835Z"
+      }
+    },
+    {
+      "content": "UotanStudio EROFS builder audit (2026-10-16): systematic audit of the rest of the ErofsBuilder for the same defect classes as the encoder-fidelity and shrink-gate bugs. Two fixes in UotanStudio.Firmware/FileSystem/Erofs/Builder/ErofsBuilder.Compression.cs: (1) the compression-shrink gate (plans.Sum(compressedBlocks) >= totalClusters -> return null) must be skipped when node.SourceInode is { SourceCompressed: true }, else a preserved-rebuild inode drops to flat blocks and VerifyPreservedStorageStrategies throws; (2) WriteExtentIndexes used an incremental physical cursor for ALL record sizes, but upstream lib/zmap.c and the managed parser treat recSz>=8 extent records as per-extent ABSOLUTE pstart_lo|pstart_hi<<32 and only chain for recSz<=4; pcluster frame reuse can hand back a non-contiguous block, so recSz>=8 records must write plan.BlockAddress*blockSize directly (chained flag = recordSize <= 4). New tests: ErofsExtentIntraFileDedupeTests.cs (file-level + repeated-frame reuse, reads extent physicals and asserts the reused absolute address) and ErofsZtailpackingTests.cs (inline tail placement verified: writer reserves tailSize inside GetInodeRecordSize so MetaOffset+recordSize-outLen == the parser's CompressedIndexEnd, matching upstream nextpackoff). Verified clean: PARTIAL_REF absence is self-consistent (planner never starts a pcluster mid-lcluster), dense planner has no whole-file gate, compression config records / BIG_PCLUSTER_1|2 / HEAD2 / extent fmt bits all match upstream compress.c, metabox body and chunk indexes store absolute addresses. Caveat: this workspace has a parallel session editing Compress/F2fs/Cpio/RegexInfer mid-build, which repeatedly deletes bin outputs and can silently revert in-flight edits in shared files; verification used a private copy of the test host under D:\\GkiErofsRun\\audit to escape lock contention.",
+      "target": "memory",
+      "importance": "normal",
+      "created_at": "2026-10-16T09:38:47.233Z",
+      "updated_at": "2026-10-16T09:38:47.233Z",
+      "branches": [
+        "master"
+      ],
+      "origin": {
+        "machine": "4cb76af2-6331-41a5-ba4c-fa41f7b2d1f6",
+        "label": "MetaBook01",
+        "at": "2026-10-16T09:38:47.233Z"
+      }
+    },
+    {
+      "content": "UotanStudio RKDL references: reference/rkdeveloptool (rockchip-linux commit 304f073, GPL-2.0+) and reference/rkdevtool (hiifong commit 34257529, no license file) are cloned read-only protocol references with UPSTREAM.md provenance notes; /reference is gitignored. Comm Protocols/Bootrom now decodes the full STRUCT_FLASHINFO_CMD (block/page size in 512B sectors, ECC bits, access time, manufacturer code, flash CS bitmask, block count) plus the READ_CAPABILITY word (bit0 direct LBA, bit2 first-4M), issues WRITE_SECTOR 0x05 with 528-byte sectors (max 32), treats CSW status 1 on ERASE_NORMAL/ERASE_FORCE as a tolerated bad-block, and offers subcoded TEST_UNIT_READY and EraseAllFlash (ERASE_LBA for eMMC/direct-LBA, else per-CS ERASE_FORCE in 16-block chunks).",
+      "target": "memory",
+      "importance": "normal",
+      "created_at": "2026-10-26T20:34:39.158Z",
+      "updated_at": "2026-10-26T20:34:39.158Z",
+      "origin": {
+        "machine": "4cb76af2-6331-41a5-ba4c-fa41f7b2d1f6",
+        "label": "MetaBook01",
+        "at": "2026-10-26T20:34:39.158Z"
+      }
+    },
+    {
+      "content": "UotanStudio Rockchip partition-table work: an IDA Pro MCP endpoint at http://127.0.0.1:13337/mcp serves the official RKDevTool.exe v3.37 IDB (MFC x86, idb at D:\\EXE Installer\\RKDevTool_v3.37\\RKDevTool.exe.i64); its analyze_function tool takes `addr` (not `address`) and find_regex only matches function names — use find type=string for string searches. reference/rkdeveloptool is the open-source CLI equivalent; its `ppt` command = read 34 sectors at LBA 0 via RKU_ReadLBA + verify 'EFI PART' signature, parameter fallback = 512 sectors at LBA 0x2000 with 'PARA'+len+CMDLINE.",
+      "target": "memory",
+      "importance": "normal",
+      "created_at": "2026-11-01T22:36:39.722Z",
+      "updated_at": "2026-11-01T22:36:39.722Z",
+      "origin": {
+        "machine": "4cb76af2-6331-41a5-ba4c-fa41f7b2d1f6",
+        "label": "MetaBook01",
+        "at": "2026-11-01T22:36:39.722Z"
+      }
+    }
+  ]
 }

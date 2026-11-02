@@ -1,4 +1,2176 @@
 {
   "version": 1,
-  "documents": []
+  "documents": [
+    {
+      "id": "34836e58-8171-4896-8965-ee504e29271f",
+      "title": "F2FS 真实镜像重打包容量账目缺陷与 GKI 往返验证结论",
+      "description": "F2FS 托管重打包时 checkpoint overprovision 未计入主区段数导致 GKI 拒绝挂载的根因、修复点、回归测试与三内核往返验证边界。",
+      "status": "active",
+      "filename": "f2fs-gki-34836e58.md",
+      "relativePath": "documents/active/f2fs-gki-34836e58.md",
+      "sourcePaths": [
+        "VERIFICATION.md",
+        "UotanStudio.Firmware/FileSystem/F2fs/F2fsBuilder.cs",
+        "UotanStudio.Firmware/FileSystem/F2fs/F2fsBuilder.Metadata.cs",
+        "UotanStudio.Firmware/FileSystem/F2fs/F2fsParser.cs",
+        "UotanStudio.Tests/Firmware/F2fsTests.cs",
+        "artifacts/gki-fs-lab/f2fs-real-20261024/report.md",
+        "artifacts/gki-fs-lab/f2fs-real-20261024/report.json"
+      ],
+      "sessionIds": [
+        "0907b393-f2ae-452a-a11b-118ff8b6a061"
+      ],
+      "createdAt": "2026-10-23T17:23:26.426Z",
+      "updatedAt": "2026-10-23T17:23:26.426Z",
+      "lastAccessedAt": "2026-10-24T19:28:46.764Z",
+      "revision": 1,
+      "contentHash": "f111e0f7cc0a046df1f2b02ff803abaa83035fbb1e811cc1e0dad484e2dd6265",
+      "sizeBytes": 4876,
+      "memoryBodyIds": []
+    },
+    {
+      "id": "b1898c91-0104-446e-9ebf-b27f6dcb61c6",
+      "title": "ADB/HDC 远端连接修复与真机验证（2026-10-24）",
+      "description": "Comm 的 ADB/HDC USB/TCP 直连与 server 路由修复根因、真机验证矩阵、环境前提（HDC 无串口、fail-closed 直连）与未验证边界。",
+      "status": "active",
+      "filename": "adb-hdc-2026-10-24-b1898c91.md",
+      "relativePath": "documents/active/adb-hdc-2026-10-24-b1898c91.md",
+      "sourcePaths": [
+        "UotanStudio.Comm/Protocols/Adb/AdbConstants.cs",
+        "UotanStudio.Comm/Protocols/Adb/AdbConnection.cs",
+        "UotanStudio.Comm/Protocols/Adb/AdbServerServices.cs",
+        "UotanStudio.Comm/Protocols/Hdc/HdcConnection.cs",
+        "UotanStudio.Comm/Protocols/Hdc/HdcServerClient.cs",
+        "UotanStudio.Comm/Transports/Tcp/HdcTcpTransport.cs",
+        "UotanStudio/Services/Devices/DeviceMonitorService.Remote.cs",
+        "VERIFICATION.md"
+      ],
+      "sessionIds": [
+        "b14c2241-df83-48fa-9f3d-63c54081ccde"
+      ],
+      "createdAt": "2026-10-23T17:23:36.866Z",
+      "updatedAt": "2026-10-23T17:23:36.866Z",
+      "lastAccessedAt": "2026-10-28T13:36:22.478Z",
+      "revision": 1,
+      "contentHash": "30d46f7e4d2f22ed117cb02c0d346099c9a799ad84596eccefa46ab0e6454824",
+      "sizeBytes": 7082,
+      "memoryBodyIds": []
+    },
+    {
+      "id": "fe4bd5e7-924b-45ec-aa91-975d63f3b737",
+      "title": "ohscrcpy 投屏重写：UI Test 扩展 + 标准 gRPC/HTTP2 视频 + UI Test JSON 控制（2026-10-24）",
+      "description": "UotanStudio.Mirroring 的 ohscrcpy 从 HAP 安装改为 UI Test 扩展 + 自实现 h2c gRPC + UI Test JSON/uinput 控制的设计理由、所有权模型、验证数字与真机未验证边界。",
+      "status": "active",
+      "filename": "ohscrcpy-ui-test-grpc-http2-ui-test-json-2026-10-fe4bd5e7.md",
+      "relativePath": "documents/active/ohscrcpy-ui-test-grpc-http2-ui-test-json-2026-10-fe4bd5e7.md",
+      "sourcePaths": [
+        "UotanStudio.Mirroring/Ohscrcpy/OhscrcpyServerManager.cs",
+        "UotanStudio.Mirroring/Ohscrcpy/OhoscrcpyGrpcTransport.cs",
+        "UotanStudio.Mirroring/Ohscrcpy/OhscrcpyGrpcProtocol.cs",
+        "UotanStudio.Mirroring/Ohscrcpy/OhscrcpyProtocol.cs",
+        "UotanStudio.Mirroring/Ohscrcpy/OhscrcpyClient.cs",
+        "UotanStudio.Mirroring/Ohscrcpy/OhscrcpyControlChannel.cs",
+        "UotanStudio.Mirroring/Ohscrcpy/ScrcpyToOhscrcpyControlAdapter.cs",
+        "UotanStudio.Mirroring/MirrorSessionFacade.cs",
+        "UotanStudio.Mirroring/Ohscrcpy/ManagedOhscrcpySession.cs",
+        "UotanStudio.Comm/Transports/Tcp/HdcForwardTunnel.cs",
+        "UotanStudio.Comm/Contracts/HdcSessionContracts.cs",
+        "UotanStudio/Services/Devices/DeviceMonitorService.Ohscrcpy.cs",
+        "UotanStudio/ViewModels/Editors/ScreenMirrorViewModel.cs",
+        "UotanStudio.Mirroring/UotanStudio.Mirroring.csproj",
+        "VERIFICATION.md",
+        "UotanStudio.Mirroring/AGENTS.md"
+      ],
+      "sessionIds": [
+        "f97ee7a0-317e-47d8-bf04-6de248a89f6b"
+      ],
+      "createdAt": "2026-10-23T17:48:50.391Z",
+      "updatedAt": "2026-10-23T17:48:50.391Z",
+      "lastAccessedAt": "2026-10-28T16:09:40.973Z",
+      "revision": 1,
+      "contentHash": "992bf9cf92356f155c18854e1e73e7bdacc101b8c93797b56811f6892b7fb251",
+      "sizeBytes": 7966,
+      "memoryBodyIds": []
+    },
+    {
+      "id": "ccc1063c-92f3-4a7b-98cf-bc921c0c4b23",
+      "title": "UotanStudio 内嵌资源 zstd 压缩可行性评估（2026-10-24）",
+      "description": "UotanStudio 的 magic 规则表 / MiSans 字体 / ohos 设备 .so / update-binary 用 zstd 压缩的实测体积账、解压分配与耗时、分项可行性与风险、落地顺序，以及 Avalonia 12 字体原型结论。",
+      "status": "active",
+      "filename": "uotanstudio-zstd-2026-10-24-ccc1063c.md",
+      "relativePath": "documents/active/uotanstudio-zstd-2026-10-24-ccc1063c.md",
+      "sourcePaths": [
+        "UotanStudio.Firmware/Core/Magic/Generated/CompiledMagicData.g.cs",
+        "UotanStudio.Firmware/Core/Magic/CompiledMagicEngine.cs",
+        "UotanStudio.Mirroring/UotanStudio.Mirroring.csproj",
+        "UotanStudio.Delivery/Build/Updater.cs",
+        "UotanStudio/App.axaml",
+        "UotanStudio/Assets/Fonts/NOTICE.md",
+        "UotanStudio.Tests/Firmware/Architecture/CompressionImplementationBoundaryTests.cs"
+      ],
+      "sessionIds": [
+        "5423575e-14c3-4dbf-9ead-20fe66e525c0"
+      ],
+      "createdAt": "2026-10-23T18:18:57.412Z",
+      "updatedAt": "2026-10-23T18:18:57.412Z",
+      "lastAccessedAt": "2026-10-28T13:36:22.478Z",
+      "revision": 1,
+      "contentHash": "00f80cdd6bfed822de0bba60a28e077a70dc7c2e32731a49b4334df814f15415",
+      "sizeBytes": 11047,
+      "memoryBodyIds": []
+    },
+    {
+      "id": "2c8758fd-cdbb-4569-8533-645110211a65",
+      "title": "DevEco 投屏设备库来源与重新提取（15 文件 + server0 回退）",
+      "description": "UotanStudio.Mirroring/Assets/ohos/device 的 DevEco Studio 26.0.0.821 来源、JAR/逐文件摘要、tools/deveco-mirroring 重新提取流程、server0 回退排序理由，以及真机不可加载与构建被并行改动阻塞的未验证边界。",
+      "status": "active",
+      "filename": "deveco-15-server0-2c8758fd.md",
+      "relativePath": "documents/active/deveco-15-server0-2c8758fd.md",
+      "sourcePaths": [
+        "UotanStudio.Mirroring/Assets/ohos/device",
+        "UotanStudio.Mirroring/Assets/ohos/README.md",
+        "UotanStudio.Mirroring/Ohscrcpy/OhscrcpyServerManager.cs",
+        "tools/deveco-mirroring/extract.ps1",
+        "tools/deveco-mirroring/README.md",
+        "UotanStudio.Mirroring/AGENTS.md",
+        "VERIFICATION.md",
+        "UotanStudio.Tests/Mirroring/OhscrcpyServerManagerTests.cs"
+      ],
+      "sessionIds": [
+        "ce6b1eda-323f-4bd4-b72e-949f57b7ee79"
+      ],
+      "createdAt": "2026-10-23T18:40:09.752Z",
+      "updatedAt": "2026-10-23T18:40:09.752Z",
+      "lastAccessedAt": "2026-10-24T15:13:28.173Z",
+      "revision": 1,
+      "contentHash": "592b2281a54da251130ff0149ea6274420089b2c954663864a09e205a1214edf",
+      "sizeBytes": 3640,
+      "memoryBodyIds": []
+    },
+    {
+      "id": "8f130951-1500-4159-8e8f-8e106efe5232",
+      "title": "投屏呈现恢复状态机与 APP_SWITCH 和弦控制（2026-10-24）",
+      "description": "UotanStudio 投屏 GPU 合成表面恢复状态机（代际令牌/250ms 去抖/ResetVideo 关键帧）、APP_SWITCH 映射为 META_LEFT+TAB 和弦的 wire 命令、HDC 启动选项收敛与位图回退门控的设计理由、文件位置与未验证边界。",
+      "status": "active",
+      "filename": "app-switch-2026-10-24-8f130951.md",
+      "relativePath": "documents/active/app-switch-2026-10-24-8f130951.md",
+      "sourcePaths": [
+        "UotanStudio/Views/Editors/ScreenMirrorGpuPresenter.cs",
+        "UotanStudio/Views/Editors/ScreenMirrorVideoControl.cs",
+        "UotanStudio/Views/Editors/ScreenMirrorView.axaml.cs",
+        "UotanStudio/ViewModels/Editors/ScreenMirrorViewModel.cs",
+        "UotanStudio.Mirroring/Ohscrcpy/OhscrcpyControlChannel.cs",
+        "UotanStudio.Mirroring/Ohscrcpy/OhscrcpyClient.cs",
+        "UotanStudio.Mirroring/Ohscrcpy/OhscrcpyContracts.cs",
+        "UotanStudio.Mirroring/Ohscrcpy/ScrcpyToOhscrcpyControlAdapter.cs"
+      ],
+      "sessionIds": [
+        "165b8f20-fd0a-4b08-9a54-05eb45478606"
+      ],
+      "createdAt": "2026-10-23T18:41:19.745Z",
+      "updatedAt": "2026-10-23T18:41:19.745Z",
+      "lastAccessedAt": "2026-10-28T12:51:09.017Z",
+      "revision": 1,
+      "contentHash": "a36df3ad206fe492d8eb694669b0b16dfb598c868fae9d9042f667d4de451042",
+      "sizeBytes": 4827,
+      "memoryBodyIds": []
+    },
+    {
+      "id": "15613614-f9e3-4daa-b1c0-a2aa9cd9528d",
+      "title": "HDC Server 路由会话化：remote-client 双工任务帧、统一文件/安装/卸载与投屏租约（2026-10-24）",
+      "description": "HDC server 路由补齐文件/安装卸载/投屏会话的设计与语义（含 RecvDirectory 根目录名、fport 回退、清理顺序）、压缩架构门禁修法、验证数字与真机未验证边界。",
+      "status": "active",
+      "filename": "hdc-server-remote-client-2026-10-24-15613614.md",
+      "relativePath": "documents/active/hdc-server-remote-client-2026-10-24-15613614.md",
+      "sourcePaths": [
+        "UotanStudio.Comm/Protocols/Hdc/HdcServerTaskChannel.cs",
+        "UotanStudio.Comm/Protocols/Hdc/HdcTaskChannel.cs",
+        "UotanStudio.Comm/Protocols/Hdc/HdcServerSyncClient.cs",
+        "UotanStudio.Comm/Protocols/Hdc/HdcServerAppClient.cs",
+        "UotanStudio.Comm/Protocols/Hdc/HdcTransferEngine.cs",
+        "UotanStudio.Comm/Protocols/Hdc/HdcServerClient.cs",
+        "UotanStudio.Comm/Protocols/Hdc/HdcDeviceServices.cs",
+        "UotanStudio/Services/Devices/HdcSessionRouting.cs",
+        "UotanStudio/Services/Devices/HdcDeviceService.cs",
+        "UotanStudio/Services/Devices/DeviceMonitorService.Ohscrcpy.cs",
+        "UotanStudio/ViewModels/Workspace/WorkspaceViewModel.cs",
+        "UotanStudio.Comm/Protocols/SpacemiT/SpacemiTFlasher.cs",
+        "UotanStudio.Tests/Devices/HdcServerTransferTests.cs",
+        "UotanStudio.Tests/Devices/HdcSessionRoutingTests.cs"
+      ],
+      "sessionIds": [
+        "724e5979-fa5d-4965-9fd5-7a6a35b7afbe"
+      ],
+      "createdAt": "2026-10-23T19:41:48.094Z",
+      "updatedAt": "2026-10-23T19:41:48.094Z",
+      "lastAccessedAt": "2026-11-02T01:41:28.795Z",
+      "revision": 1,
+      "contentHash": "4d6ef7df6a58074f57407f77b2117d6e8ec3908f456b383a93268e3bb7554b7b",
+      "sizeBytes": 6595,
+      "memoryBodyIds": []
+    },
+    {
+      "id": "44550dcf-0e22-40ac-b0f2-ea4aac9f0e48",
+      "title": "UotanStudio 启动窗改造：字体解压可见化与阶段状态（2026-10-24）",
+      "description": "启动窗把内嵌 MiSans 的 zstd 解压显示为第一个阶段、启动窗改用平台默认字体的取舍、进度条恒为不确定态、11 段启动阶段文本的修正，以及运行时冒烟 / 全量测试 / NativeAOT 实测。",
+      "status": "active",
+      "filename": "uotanstudio-2026-10-24-44550dcf.md",
+      "relativePath": "documents/active/uotanstudio-2026-10-24-44550dcf.md",
+      "sourcePaths": [
+        "UotanStudio/ViewModels/Shell/SplashViewModel.cs",
+        "UotanStudio/Views/Shell/MainSplashWindow.axaml",
+        "UotanStudio/App.axaml.cs",
+        "UotanStudio/Fonts/ZstdEmbeddedFontCollection.cs",
+        "UotanStudio/Fonts/MiSansFontData.cs",
+        "UotanStudio/Locale/Common.resx",
+        "UotanStudio/Locale/Common.zh-CN.resx",
+        "UotanStudio/Locale/LocaleKeySets.cs",
+        "UotanStudio/AGENTS.md",
+        "VERIFICATION.md"
+      ],
+      "sessionIds": [
+        "adf916ae-2c03-4671-928e-abb72dbd611e"
+      ],
+      "createdAt": "2026-10-23T20:07:15.095Z",
+      "updatedAt": "2026-10-23T20:07:15.095Z",
+      "lastAccessedAt": "2026-10-26T21:43:23.213Z",
+      "revision": 1,
+      "contentHash": "d4b4194d7cd3e5bde3e030ebf8531f60a24bd109d17637e02d8576069f5fb0f2",
+      "sizeBytes": 5697,
+      "memoryBodyIds": []
+    },
+    {
+      "id": "64a77aaf-9665-44d1-8b37-0bfd4194e9e2",
+      "title": "投屏断流与 HDC 连接三类故障隔离：解码线程、USB 清单缓存、server 客户端生命周期（2026-10-24）",
+      "description": "三类故障的根因与修复边界：scrcpy 解码线程被单帧呈现异常杀死、USB 清单缓存陈旧导致 HDC 直连误报占用、HDC server 客户端 disposed 级联与 fail-fast 策略。",
+      "status": "active",
+      "filename": "hdc-usb-server-2026-10-24-64a77aaf.md",
+      "relativePath": "documents/active/hdc-usb-server-2026-10-24-64a77aaf.md",
+      "sourcePaths": [
+        "UotanStudio/ViewModels/Editors/ScreenMirrorViewModel.cs",
+        "UotanStudio/Services/Devices/DeviceMonitorService.Transactions.cs",
+        "UotanStudio/Services/Devices/HdcDirectConnection.cs",
+        "UotanStudio.Comm/Protocols/Hdc/HdcServerSyncClient.cs",
+        "UotanStudio.Comm/Protocols/Hdc/HdcServerAppClient.cs",
+        "UotanStudio.Comm/Protocols/Hdc/HdcSession.cs",
+        "UotanStudio.Comm/Protocols/Hdc/HdcServerRemoteCommand.cs",
+        "UotanStudio.Comm/Protocols/Hdc/HdcServerClient.cs",
+        "UotanStudio.Mirroring/Ohscrcpy/OhscrcpyServerManager.cs"
+      ],
+      "sessionIds": [
+        "3f1f093d-8607-406b-bd29-1921ddbd6f6d"
+      ],
+      "createdAt": "2026-10-23T20:16:07.390Z",
+      "updatedAt": "2026-10-23T20:16:07.390Z",
+      "lastAccessedAt": "2026-10-26T18:15:21.494Z",
+      "revision": 1,
+      "contentHash": "ed5d38202673a93b43890cf6859fc309b9d18014d7490aece84be915b96a94a6",
+      "sizeBytes": 7011,
+      "memoryBodyIds": []
+    },
+    {
+      "id": "13d2945f-9a23-4bc7-8aa9-ac82e702b5c8",
+      "title": "“Endpoint is already leased.”根因与投屏启动有界等待（USB ADB 直连，2026-10-24）",
+      "description": "直连 USB ADB 端点被详情补全/日志抓取/投屏并发抢占导致投屏启动失败：DeviceEndpointBusyException 结构化占用 + AcquireForMirror 15s 有界退避的设计、验证数字与未验证边界。",
+      "status": "active",
+      "filename": "endpoint-is-already-leased-usb-adb-2026-10-24-13d2945f.md",
+      "relativePath": "documents/active/endpoint-is-already-leased-usb-adb-2026-10-24-13d2945f.md",
+      "sourcePaths": [
+        "UotanStudio.Comm/Devices/Services/DeviceEndpointBusyException.cs",
+        "UotanStudio.Comm/Devices/Services/DeviceController.cs",
+        "UotanStudio.Comm/Devices/Services/DeviceController.Sessions.cs",
+        "UotanStudio/Services/Devices/DeviceMonitorService.ControlledSessions.cs",
+        "UotanStudio/Services/Devices/DeviceMonitorService.Operations.cs",
+        "UotanStudio/Services/Devices/DeviceMonitorService.Ohscrcpy.cs",
+        "UotanStudio.Tests/Devices/DeviceEndpointBusyTests.cs"
+      ],
+      "sessionIds": [
+        "267c8b4c-936f-434e-b6b5-83cbf726189e"
+      ],
+      "createdAt": "2026-10-24T16:29:26.629Z",
+      "updatedAt": "2026-10-24T16:29:26.629Z",
+      "lastAccessedAt": "2026-11-02T01:10:36.184Z",
+      "revision": 1,
+      "contentHash": "f21f6b5bb6f59e3474be00a7050935d80575f18b07173140bcbfe0b880d628e9",
+      "sizeBytes": 6245,
+      "memoryBodyIds": []
+    },
+    {
+      "id": "6f754ead-5fb1-4813-8e9c-cdc70dcbc7cb",
+      "title": "投屏启动 endpoint busy 真因：本宿主遗留投屏会话持有端点与回收设计（ADB/HDC，2026-10-24）",
+      "description": "在既有 15s 有界等待之上，新归因：本宿主上一次投屏会话遗留持有独占端点。TrackMirrorSession 按物理序列号登记 + AcquireForMirror 先回收再重试的设计、验证数字（6/6、231/231、12/12）与真机未验证边界。",
+      "status": "active",
+      "filename": "endpoint-busy-adb-hdc-2026-10-24-6f754ead.md",
+      "relativePath": "documents/active/endpoint-busy-adb-hdc-2026-10-24-6f754ead.md",
+      "sourcePaths": [
+        "UotanStudio/Services/Devices/DeviceMonitorService.ControlledSessions.cs",
+        "UotanStudio/Services/Devices/DeviceMonitorService.Operations.cs",
+        "UotanStudio/Services/Devices/DeviceMonitorService.Ohscrcpy.cs",
+        "UotanStudio.Tests/Devices/DeviceEndpointBusyTests.cs",
+        "VERIFICATION.md"
+      ],
+      "sessionIds": [
+        "059c739f-f24b-42af-a6ce-2f1e44076c62"
+      ],
+      "createdAt": "2026-10-24T17:24:41.211Z",
+      "updatedAt": "2026-10-24T17:24:41.211Z",
+      "lastAccessedAt": "2026-10-24T23:37:52.912Z",
+      "revision": 1,
+      "contentHash": "f9e51d4711284e3e5c67d05407b72fdded518c37212ed6750be187f42fffd623",
+      "sizeBytes": 4931,
+      "memoryBodyIds": []
+    },
+    {
+      "id": "cf882e65-ccd3-495b-88c1-257498f9f5b5",
+      "title": "投屏 endpoint busy 第二类持有者：无界设备详情补全 + ERROR 995 折叠成零字节读（宿主抢占设计，2026-10-24）",
+      "description": "在遗留投屏会话回收之外的新归因：刷新触发的设备详情补全无界占用端点（7 条 shell 命令 + HasSuAsync 无取消），且 WinUSB 异步 995=ERROR_OPERATION_ABORTED 被折叠成零字节非超时读使协议循环空转。BeginBackgroundEndpointWork/CancelBackgroundEndpointWork/ReleaseMirrorEndpointHolders 抢占 + 补全 20s/8s 有界 + 995 改致命的设计、实测数字（10/10、2/2、237/237）与真机未验证边界。",
+      "status": "active",
+      "filename": "endpoint-busy-error-995-2026-10-24-cf882e65.md",
+      "relativePath": "documents/active/endpoint-busy-error-995-2026-10-24-cf882e65.md",
+      "sourcePaths": [
+        "UotanStudio/Services/Devices/DeviceMonitorService.ControlledSessions.cs",
+        "UotanStudio/Services/Devices/DeviceMonitorService.Operations.cs",
+        "UotanStudio/Services/Devices/DeviceMonitorService.Ohscrcpy.cs",
+        "UotanStudio/ViewModels/Devices/DeviceViewModel.Details.cs",
+        "UotanStudio.Comm/Transports/Usb/Backend/Windows/WinUSBDevice.AsyncIO.cs",
+        "UotanStudio.Comm/Transports/Usb/Backend/Windows/WinUSBDevice.cs",
+        "UotanStudio.Tests/Devices/DeviceEndpointBusyTests.cs",
+        "UotanStudio.Tests/Devices/WinUsbAbortedTransferTests.cs",
+        "VERIFICATION.md"
+      ],
+      "sessionIds": [
+        "b92c19e2-e219-480c-afe3-bba3b6e103ef"
+      ],
+      "createdAt": "2026-10-24T18:55:38.300Z",
+      "updatedAt": "2026-10-24T18:55:38.300Z",
+      "lastAccessedAt": "2026-10-24T20:40:01.298Z",
+      "revision": 1,
+      "contentHash": "78b09c12799ae78104df6584eae6df4a44cf759230736d33984c7e2d811af396",
+      "sizeBytes": 6393,
+      "memoryBodyIds": []
+    },
+    {
+      "id": "5f7e53bd-684f-407a-a6e6-1dc10fa79536",
+      "title": "序列号回退 VID:PID 与端点永不归还：FIFO 窥视闸门、粘性序列号缓存与 CancelIoEx 中止确认隔离（2026-10-24）",
+      "description": "在既有端点占用三篇之外的新归因与修复：Windows 序列号窥视需独占接口导致回退 VID:PID（FifoGate 到达顺序闸门 + 按实例 ID 的粘性序列号缓存，成功 30 分钟/失败抑制 2 秒）；CancelIoEx 后无界等待驱动确认使 DeviceLease 卡在会话步、端点永不归还（5 秒有界 + QuarantinedTransfers 保留 UAF 防护并抛 ERROR_OPERATION_ABORTED）；详情补全 30s/45s 并接取消与 Debug 日志。含 245/245 等实测数字与真机未验证边界。",
+      "status": "active",
+      "filename": "vid-pid-fifo-cancelioex-2026-10-24-5f7e53bd.md",
+      "relativePath": "documents/active/vid-pid-fifo-cancelioex-2026-10-24-5f7e53bd.md",
+      "sourcePaths": [
+        "UotanStudio.Comm/Transports/Usb/Core/FifoGate.cs",
+        "UotanStudio.Comm/Transports/Usb/Backend/Windows/UsbSerialCache.cs",
+        "UotanStudio.Comm/Transports/Usb/Backend/Windows/WinUSBFinder.cs",
+        "UotanStudio.Comm/Transports/Usb/Backend/Windows/WinUSBFinder.Metadata.cs",
+        "UotanStudio.Comm/Transports/Usb/Backend/Windows/WinUSBDevice.AsyncIO.cs",
+        "UotanStudio.Comm/Devices/Services/DeviceCommandDispatcher.cs",
+        "UotanStudio/ViewModels/Devices/DeviceViewModel.Details.cs",
+        "UotanStudio.Tests/Devices/UsbSerialCacheTests.cs",
+        "UotanStudio.Tests/Devices/FifoGateTests.cs",
+        "VERIFICATION.md"
+      ],
+      "sessionIds": [
+        "a6cecb73-74c0-4ed7-ae24-2ce1dd5a10a5"
+      ],
+      "createdAt": "2026-10-24T19:07:56.032Z",
+      "updatedAt": "2026-10-24T19:07:56.032Z",
+      "lastAccessedAt": "2026-11-02T00:56:06.060Z",
+      "revision": 1,
+      "contentHash": "82ae75d857aba1fa254047cb530fac08ce4882993d53d051d26d9c8229244aa9",
+      "sizeBytes": 7289,
+      "memoryBodyIds": []
+    },
+    {
+      "id": "00a7134c-62cd-457b-b10c-88e2aa352b0e",
+      "title": "投屏 ReadFrame 超时返回 null 被 ?? 误判为缺失实现：facade NRE 根因与回归测试",
+      "description": "MirrorSessionFacade 用 ?? 串联两条投屏实现，导致一次视频读超时（合法 null）触发 NullReferenceException 并杀死宿主解码循环；含触发条件、修复、变异验证的回归测试与未验证边界。",
+      "status": "active",
+      "filename": "readframe-null-facade-nre-00a7134c.md",
+      "relativePath": "documents/active/readframe-null-facade-nre-00a7134c.md",
+      "sourcePaths": [
+        "UotanStudio.Mirroring/MirrorSessionFacade.cs",
+        "UotanStudio.Mirroring/Scrcpy/ScrcpyClient.cs",
+        "UotanStudio.Mirroring/ManagedMirrorSession.cs",
+        "UotanStudio/ViewModels/Editors/ScreenMirrorViewModel.cs",
+        "UotanStudio.Tests/Mirroring/MirrorSessionFacadeTests.cs"
+      ],
+      "sessionIds": [
+        "a146302e-48ea-4524-8e6e-f37db01b420e"
+      ],
+      "createdAt": "2026-10-24T19:26:47.063Z",
+      "updatedAt": "2026-10-24T19:26:47.063Z",
+      "lastAccessedAt": "2026-10-25T00:01:14.670Z",
+      "revision": 1,
+      "contentHash": "858a3c85ff162a5cafcfd085dcd97b6561a5beed6320ff4f0ec7ac19756cbda7",
+      "sizeBytes": 5350,
+      "memoryBodyIds": []
+    },
+    {
+      "id": "78613e8c-9182-4f03-8607-b11ce652e00d",
+      "title": "ADB 直连握手 Invalid message magic：帧错位根因诊断与失败信息可判定化",
+      "description": "UotanStudio ADB 直连握手报 Invalid ADB message magic 的完整症状链（ParseHeader → AdbConnection 包装 → FirstChance 日志）、启动时序竞态根因、magic 失败信息增强与回归测试、三条未实施的正式修复及真机未验证边界。",
+      "status": "active",
+      "filename": "adb-invalid-message-magic-78613e8c.md",
+      "relativePath": "documents/active/adb-invalid-message-magic-78613e8c.md",
+      "sourcePaths": [
+        "UotanStudio.Comm/Protocols/Adb/AdbMessage.cs",
+        "UotanStudio.Comm/Protocols/Adb/AdbConnection.cs",
+        "UotanStudio.Comm/Protocols/Adb/AdbConstants.cs",
+        "UotanStudio.Comm/Devices/Services/DebugBridgeSessionOpener.cs",
+        "UotanStudio.Comm/Routing/DebugBridgeRoute.cs",
+        "UotanStudio/Services/Logging/FirstChanceExceptionLogger.cs",
+        "UotanStudio/ViewModels/Devices/DeviceViewModel.Details.cs",
+        "UotanStudio.Tests/Protocols/AdbHandshakeDiagnosticsTests.cs"
+      ],
+      "sessionIds": [
+        "a086351d-622a-4cbc-bfd0-71c5253d9c90"
+      ],
+      "createdAt": "2026-10-24T19:36:32.162Z",
+      "updatedAt": "2026-10-24T19:36:32.162Z",
+      "lastAccessedAt": "2026-10-26T20:15:02.090Z",
+      "revision": 1,
+      "contentHash": "a074477ff71b4c8f09015af7203d2cbc073b9656f0dbd05e68c0d6cc9f5e4e4a",
+      "sizeBytes": 6408,
+      "memoryBodyIds": []
+    },
+    {
+      "id": "a5d269a7-9135-4931-b07e-4fd83229ccdc",
+      "title": "Comm 全库缺陷排查结论与 ADB 入站原始帧日志契约",
+      "description": "UotanStudio.Comm 排查：UsbStream 部分写静默丢数据与 USB 枚举异常细节两项修复、ADB 入站 24 字节头日志契约（Error 必落盘 / UOTAN_COMM_RAW 预览）与判读表、串口/HDC/sync-over-async 观察项、确认非缺陷清单与验证数字。",
+      "status": "active",
+      "filename": "comm-adb-a5d269a7.md",
+      "relativePath": "documents/active/comm-adb-a5d269a7.md",
+      "sourcePaths": [
+        "UotanStudio.Comm/Transports/Usb/UsbStream.cs",
+        "UotanStudio.Comm/Transports/Usb/Providers/UsbApiProviderBase.cs",
+        "UotanStudio.Comm/Protocols/Adb/AdbConnection.cs",
+        "UotanStudio.Comm/Protocols/Adb/AdbMessage.cs",
+        "UotanStudio.Tests/Usb/UsbStreamWriteTests.cs",
+        "VERIFICATION.md"
+      ],
+      "sessionIds": [
+        "d1ee7e89-4eb6-4e78-a57d-f22a911c2e13"
+      ],
+      "createdAt": "2026-10-24T19:38:02.815Z",
+      "updatedAt": "2026-10-24T19:38:02.815Z",
+      "lastAccessedAt": "2026-10-25T04:12:39.694Z",
+      "revision": 1,
+      "contentHash": "7b39e2729cb8a729104feb2490ac06cbe57faada903bd38285d60a011da7e101",
+      "sizeBytes": 5551,
+      "memoryBodyIds": []
+    },
+    {
+      "id": "44373da3-33a5-4818-8a9d-fa21d5bc2e75",
+      "title": "USB ADB 直连握手持续外来帧（05C6:90DB）：已排除原因、新增诊断日志与待判定分支",
+      "description": "直连 05C6:90DB 时入站 24 字节持续为非 ADB 数据（探测 0 ms 满速）的排查证据、已排除的残留投屏/脏字节假设、新增的接口清单/探测/多读者日志，以及需用 adb devices -l 区分“设备侧 adb 未激活”与“端点对选错”的判定路径。",
+      "status": "active",
+      "filename": "usb-adb-05c6-90db-44373da3.md",
+      "relativePath": "documents/active/usb-adb-05c6-90db-44373da3.md",
+      "sourcePaths": [
+        "UotanStudio.Comm/Protocols/Adb/AdbConnection.cs",
+        "UotanStudio.Comm/Transports/Usb/Core/UsbDeviceSession.cs",
+        "UotanStudio.Comm/Transports/Usb/Core/UsbDeviceInfoFactory.cs",
+        "UotanStudio.Comm/Protocols/Adb/AdbFactory.cs",
+        "UotanStudio.Comm/Devices/Discovery/UsbProtocolClassifier.cs",
+        "UotanStudio.Comm/Transports/Usb/Backend/Windows/WinUSBFinder.Metadata.cs"
+      ],
+      "sessionIds": [
+        "21a14312-6be4-4c00-8d35-1ae63144c9d8"
+      ],
+      "createdAt": "2026-10-24T20:02:38.416Z",
+      "updatedAt": "2026-10-24T20:02:38.416Z",
+      "lastAccessedAt": "2026-11-02T01:12:35.482Z",
+      "revision": 1,
+      "contentHash": "5e8ce47ad48f0206fef98b54f88857b3c08793159945ce4c46af6e582cf4f21e",
+      "sizeBytes": 6885,
+      "memoryBodyIds": []
+    },
+    {
+      "id": "a8f55ea5-bea4-4769-840d-683303866320",
+      "title": "ADB 直连被外部读者共享与设备扫描锁卡顿：机制、已实施修复、判定路径",
+      "description": "WinUSB 多句柄共享 ADB 接口导致直连读到他人帧、路由层 fail-open 漏洞及 fail-closed/实时重探测修复、Scan() 扫描锁 250ms 上限与慢扫描日志、logcat 捕获 5s 退避与超时报文增强，含验证数字与未验证边界。",
+      "status": "active",
+      "filename": "adb-a8f55ea5.md",
+      "relativePath": "documents/active/adb-a8f55ea5.md",
+      "sourcePaths": [
+        "UotanStudio.Comm/Devices/Services/DebugBridgeSessionOpener.cs",
+        "UotanStudio.Comm/Routing/DebugBridgeRoute.cs",
+        "UotanStudio/Services/Devices/DeviceMonitorService.Discovery.cs",
+        "UotanStudio/Services/Devices/DeviceMonitorService.Logs.cs",
+        "UotanStudio/ViewModels/Devices/DeviceViewModel.cs",
+        "UotanStudio/ViewModels/Devices/DeviceViewModel.Connection.cs",
+        "VERIFICATION.md"
+      ],
+      "sessionIds": [
+        "82580b7c-4ddf-4e91-94ac-3fe96ec36bae"
+      ],
+      "createdAt": "2026-10-24T20:20:39.699Z",
+      "updatedAt": "2026-10-24T20:20:39.699Z",
+      "lastAccessedAt": "2026-11-02T00:56:06.060Z",
+      "revision": 1,
+      "contentHash": "40285054e8a6643f0974a3a4181840bce9f95db789156793adedc580609a35d6",
+      "sizeBytes": 6839,
+      "memoryBodyIds": []
+    },
+    {
+      "id": "c6aa8e7b-f2bf-487f-87b2-18dead97d3f0",
+      "title": "直连 USB ADB 端点“释放中占位”卡死：修正归因与修复（2026-10-24 后续）",
+      "description": "修正既有“补全占用”归因：Comm 的 _leased 释放中占位在强制分离后永不回收，致端点永久不可开；占位 1s 回收 + DescribeReservations 如实上报 + 宿主摘除重试一次，另含补全后台化、Scan 锁 250ms、日志捕获退避；投屏遮挡恢复未修。",
+      "status": "active",
+      "filename": "usb-adb-2026-10-24-c6aa8e7b.md",
+      "relativePath": "documents/active/usb-adb-2026-10-24-c6aa8e7b.md",
+      "sourcePaths": [
+        "UotanStudio.Comm/Devices/Services/DeviceController.cs",
+        "UotanStudio.Comm/Devices/Services/DeviceEndpointBusyException.cs",
+        "UotanStudio/Services/Devices/DeviceMonitorService.ControlledSessions.cs",
+        "UotanStudio/Services/Devices/DeviceMonitorService.cs",
+        "UotanStudio/ViewModels/Devices/DeviceViewModel.Details.cs",
+        "VERIFICATION.md"
+      ],
+      "sessionIds": [
+        "2681ac1c-3000-4f1f-9964-2c5e72eba335"
+      ],
+      "createdAt": "2026-10-24T20:40:22.731Z",
+      "updatedAt": "2026-10-24T20:40:22.731Z",
+      "lastAccessedAt": "2026-10-24T22:32:52.145Z",
+      "revision": 1,
+      "contentHash": "3bbf430625d2583a31fd2ddc7cbcbc4f9cfbf47470ddf38e82f6faad49ab2f37",
+      "sizeBytes": 6097,
+      "memoryBodyIds": []
+    },
+    {
+      "id": "ef57d6e3-b882-46a9-8645-6cd36cb43a18",
+      "title": "直连 USB ADB 端点租约互拆与投屏不恢复：共享会话池修复、真机验证（2026-10-25）",
+      "description": "直连 USB ADB 端点被日志抓取/详情补全/root 探测/投屏各自开独占租约并互拆导致“returned no lease”、占用者为空、UI 卡 5s、FirstChance 刷屏；修复为宿主侧共享 ADB 会话池（引用计数、断链出池、不强制摘除），投屏 borrow/owns 会话、窗口激活与最小化还原重挂合成表面并按 5s 请求关键帧、日志抓取自愈退避 5s→60s；含真机 GUI 两轮验证数字与未验证边界。",
+      "status": "active",
+      "filename": "usb-adb-2026-10-25-ef57d6e3.md",
+      "relativePath": "documents/active/usb-adb-2026-10-25-ef57d6e3.md",
+      "sourcePaths": [
+        "UotanStudio/Services/Devices/DeviceMonitorService.SharedAdb.cs",
+        "UotanStudio/Services/Devices/DeviceMonitorService.Operations.cs",
+        "UotanStudio/Services/Devices/DeviceMonitorService.Sessions.cs",
+        "UotanStudio/Services/Devices/DeviceMonitorService.Logs.cs",
+        "UotanStudio/ViewModels/Workspace/AdbLogViewModel.cs",
+        "UotanStudio/ViewModels/Editors/ScreenMirrorViewModel.cs",
+        "UotanStudio/Views/Editors/ScreenMirrorVideoControl.cs",
+        "UotanStudio/Services/Logging/FirstChanceExceptionLogger.cs",
+        "VERIFICATION.md"
+      ],
+      "sessionIds": [
+        "28374252-84fe-4a5a-b6dc-2cd573e3ef25"
+      ],
+      "createdAt": "2026-10-24T21:32:47.835Z",
+      "updatedAt": "2026-10-24T21:32:47.835Z",
+      "lastAccessedAt": "2026-11-02T00:56:06.060Z",
+      "revision": 1,
+      "contentHash": "f814072dc3e877ef15612248c7d08451118b237fe372748792af7266e3acdcf9",
+      "sizeBytes": 6205,
+      "memoryBodyIds": []
+    },
+    {
+      "id": "e488721b-f9f8-46d9-b0a2-02744b2b1a74",
+      "title": "投屏隐藏文档黑屏：保留合成表面 + 管线停滞看门狗（2026-10-25）",
+      "description": "UotanStudio 投屏切走标签再切回后画面冻结/黑屏的根因（隐藏 250ms 拆除合成表面导致解码器丢帧）、修复（隐藏只暂停呈现、表面复用、1.5s/5s 停滞看门狗、删除延迟分离令牌）、真机亮度/像素实测与未验证边界。",
+      "status": "active",
+      "filename": "2026-10-25-e488721b.md",
+      "relativePath": "documents/active/2026-10-25-e488721b.md",
+      "sourcePaths": [
+        "UotanStudio/Views/Editors/ScreenMirrorGpuPresenter.cs",
+        "UotanStudio/ViewModels/Editors/ScreenMirrorViewModel.cs",
+        "UotanStudio/Views/Editors/ScreenMirrorCompositionRecovery.cs",
+        "UotanStudio.Tests/Media/ScreenMirrorCompositionRecoveryTests.cs",
+        "VERIFICATION.md"
+      ],
+      "sessionIds": [
+        "2b6992b6-f81b-4187-84f0-0d324cb16d7c"
+      ],
+      "createdAt": "2026-10-24T22:33:08.096Z",
+      "updatedAt": "2026-10-24T22:33:08.096Z",
+      "lastAccessedAt": "2026-10-25T00:01:14.670Z",
+      "revision": 1,
+      "contentHash": "5436775ae0b8b8a6b13290280da4ee83324d977811d25525706141d186352b22",
+      "sizeBytes": 6083,
+      "memoryBodyIds": []
+    },
+    {
+      "id": "10a41837-82f0-43ce-8705-7353e1e215b7",
+      "title": "投屏四项修复归因：gRPC 单次超时（冷启动卡“正在连接”）、关闭卡顿、去掉无帧断联判定、双设备实测（2026-10-25）",
+      "description": "HDC 冷启动卡“正在连接”的 gRPC 单次超时根因（4s/3s）、关闭投屏 UI 线程 Join 卡顿的后台化修复、取消“无帧时长即断联”判定、双设备实测数字与门禁、未验证边界。",
+      "status": "active",
+      "filename": "grpc-2026-10-25-10a41837.md",
+      "relativePath": "documents/active/grpc-2026-10-25-10a41837.md",
+      "sourcePaths": [
+        "VERIFICATION.md"
+      ],
+      "sessionIds": [
+        "dc07079d-43a7-4a22-8023-156a1ea0fe5d"
+      ],
+      "createdAt": "2026-10-24T23:11:13.103Z",
+      "updatedAt": "2026-10-24T23:11:13.103Z",
+      "lastAccessedAt": "2026-10-24T23:49:39.399Z",
+      "revision": 1,
+      "contentHash": "e259417d97770eb62474386863ec028935c9e1fd5eab9e699d3a63500118b184",
+      "sizeBytes": 6376,
+      "memoryBodyIds": []
+    },
+    {
+      "id": "2ab89c06-182a-44ff-aee3-fb5457f6055e",
+      "title": "HDC 投屏不出画真因：设备侧遗留 UI Test 扩展占用固定 @scrcpy_grpc_socket + 待机断流放宽（2026-10-25）",
+      "description": "设备侧遗留 uitest 扩展进程占住固定抽象 socket 导致 onStart 永不返回的真因取证、启动前按前缀清理与待机断流重开设计、验证数字与 HDC server 转发未实测边界。",
+      "status": "active",
+      "filename": "hdc-ui-test-scrcpy-grpc-socket-2026-10-25-2ab89c06.md",
+      "relativePath": "documents/active/hdc-ui-test-scrcpy-grpc-socket-2026-10-25-2ab89c06.md",
+      "sourcePaths": [
+        "UotanStudio.Mirroring/Ohscrcpy/OhscrcpyServerManager.cs",
+        "UotanStudio.Mirroring/Ohscrcpy/OhscrcpyClient.cs",
+        "VERIFICATION.md"
+      ],
+      "sessionIds": [
+        "f3287c18-94d4-4a71-a9ff-ea356c62ae0a"
+      ],
+      "createdAt": "2026-10-24T23:38:07.546Z",
+      "updatedAt": "2026-10-24T23:38:07.546Z",
+      "lastAccessedAt": "2026-10-26T20:00:58.883Z",
+      "revision": 1,
+      "contentHash": "a2e2c9f47fdb5e717dde8ea07d7acf3e1a2d80a35dcc42889bc6bbd1e286cfc1",
+      "sizeBytes": 5850,
+      "memoryBodyIds": []
+    },
+    {
+      "id": "b7b37a41-66a6-44d5-a06e-d5044018de9b",
+      "title": "VS 清理代码报 0x80041FEB：源文件裸 NUL 字节根因与修复（FatVolumeTree.cs 案例）",
+      "description": "Roslyn invisible editor 取不到 DocData 的排查路径：含裸 NUL 的 .cs 被判为二进制；含诊断步骤、修复、验证数字与 VS 侧生效步骤。",
+      "status": "active",
+      "filename": "vs-0x80041feb-nul-fatvolumetree-cs-b7b37a41.md",
+      "relativePath": "documents/active/vs-0x80041feb-nul-fatvolumetree-cs-b7b37a41.md",
+      "sourcePaths": [
+        "UotanStudio.Firmware/FileSystem/Fat/FatVolumeTree.cs",
+        "UotanStudio.Firmware/FileSystem/Fat/FatVolumeEntry.cs"
+      ],
+      "sessionIds": [
+        "3525be1a-1ec2-4a57-b650-1c855ad1e331"
+      ],
+      "createdAt": "2026-10-25T00:01:25.418Z",
+      "updatedAt": "2026-10-25T00:01:25.418Z",
+      "lastAccessedAt": "2026-10-27T00:27:31.364Z",
+      "revision": 1,
+      "contentHash": "7b19a8e4b6ad666252353acf50132cbf9e77eac237c5b956cb5d4c54462cf141",
+      "sizeBytes": 4188,
+      "memoryBodyIds": []
+    },
+    {
+      "id": "a1040553-a8fc-487d-948f-157183fd1cfa",
+      "title": "扫码配对后自动发现连接端口 + 直连 ADB 日志传输失效修复（2026-10-25）",
+      "description": "ADB QR 配对后在同一 mDNS 浏览会话内收集 connect 候选、server 侧轮询与 adb connect 竞速、SRV 主机名双栈识别；并行修复直连 ADB 共享会话策略与 AdbConnection 写失败失效，含构建/测试数字与未验证边界。",
+      "status": "active",
+      "filename": "adb-2026-10-25-a1040553.md",
+      "relativePath": "documents/active/adb-2026-10-25-a1040553.md",
+      "sourcePaths": [
+        "UotanStudio.Comm/Protocols/Adb/Pairing/AdbQrPairingService.cs",
+        "UotanStudio.Comm/Transports/Udp/AdbMdnsDiscovery.cs",
+        "UotanStudio.Comm/Transports/Udp/MdnsDevice.cs",
+        "UotanStudio.Comm/Protocols/Adb/AdbServerMdns.cs",
+        "UotanStudio.Comm/Protocols/Adb/AdbConnection.cs",
+        "UotanStudio/Services/Devices/DeviceMonitorService.SharedAdb.cs",
+        "UotanStudio/Services/Devices/DeviceMonitorService.Logs.cs",
+        "UotanStudio.Tests/Protocols/AdbConnectionFailureTests.cs",
+        "UotanStudio.Tests/Devices/SharedAdbSessionPolicyTests.cs",
+        "VERIFICATION.md"
+      ],
+      "sessionIds": [
+        "37a51bee-5df6-4d73-a55c-0c9e1b505f92"
+      ],
+      "createdAt": "2026-10-25T02:09:08.921Z",
+      "updatedAt": "2026-10-25T02:09:08.921Z",
+      "lastAccessedAt": "2026-11-02T01:12:35.482Z",
+      "revision": 1,
+      "contentHash": "9822d2d61153537ca984822b8289790fca8c2f4d38449b4ab304db5cea1abc2c",
+      "sizeBytes": 7019,
+      "memoryBodyIds": []
+    },
+    {
+      "id": "65b080df-c163-4577-8543-ecbb049d88ac",
+      "title": "ADB server 模式扫码配对失败：“Unable to start pairing client” 根因与进程内 SPAKE2 回退（2026-10-25）",
+      "description": "host:pair 结果帧两种形状的解析容错、AdbServerPairingClientException 失败分类、配对端点 5 秒实时 mDNS 刷新与进程内 SPAKE2 回退（ServerOnly 除外）、验证数字与真机未验证边界。",
+      "status": "active",
+      "filename": "adb-server-unable-to-start-pairing-client-spake2-65b080df.md",
+      "relativePath": "documents/active/adb-server-unable-to-start-pairing-client-spake2-65b080df.md",
+      "sourcePaths": [
+        "UotanStudio.Comm/Protocols/Adb/AdbServerServices.cs",
+        "UotanStudio.Comm/Protocols/Adb/Pairing/AdbQrPairingService.cs",
+        "UotanStudio.Tests/Protocols/AdbRemoteProtocolTests.cs",
+        "UotanStudio.Tests/Devices/AdbPairingDiscoveryTests.cs",
+        "VERIFICATION.md"
+      ],
+      "sessionIds": [
+        "a5b4fbd8-9d1a-4133-af18-c01117cc6cf9"
+      ],
+      "createdAt": "2026-10-25T02:50:30.702Z",
+      "updatedAt": "2026-10-25T02:50:30.702Z",
+      "lastAccessedAt": "2026-10-28T16:09:40.973Z",
+      "revision": 1,
+      "contentHash": "7b9d3f95a43fb9cea21384ce748efc13b9b607f463a476f40d306fcb7bed082b",
+      "sizeBytes": 5399,
+      "memoryBodyIds": []
+    },
+    {
+      "id": "5cfde066-d749-4e66-8f39-c819d853361e",
+      "title": "扫码配对端口自动解析：server 目标实例名识别与直连端口重试（2026-10-25）",
+      "description": "扫码配对后“几乎每台设备都要求手填端口”的系统性根因：adb server 目标串号为 DNS-SD 实例名、跨地址族/网卡匹配失败、adbd 重启 TLS 服务导致单次探测落空；含 MatchServerConnection、BuildConnectAliases、20 秒 500ms 重试窗口、SuggestedPort 预填兜底、测试数字与真机未验证边界。",
+      "status": "active",
+      "filename": "server-2026-10-25-5cfde066.md",
+      "relativePath": "documents/active/server-2026-10-25-5cfde066.md",
+      "sourcePaths": [
+        "UotanStudio.Comm/Protocols/Adb/Pairing/AdbQrPairingService.cs",
+        "UotanStudio.Comm/Protocols/Adb/AdbServerMdns.cs",
+        "UotanStudio.Comm/Transports/Udp/AdbMdnsDiscovery.cs",
+        "UotanStudio.Comm/Devices/Discovery/AdbServerDiscoverySource.cs",
+        "UotanStudio/Services/Devices/DeviceMonitorService.Pairing.cs",
+        "UotanStudio/Views/Devices/QrPairingWindow.axaml.cs",
+        "UotanStudio.Tests/Devices/AdbPairingDiscoveryTests.cs",
+        "UotanStudio.Tests/Devices/AdbServerMdnsTests.cs",
+        "UotanStudio.Tests/Protocols/AdbRemoteProtocolTests.cs",
+        "VERIFICATION.md"
+      ],
+      "sessionIds": [
+        "c110a463-b4af-455e-8241-9369e7b1b4fb"
+      ],
+      "createdAt": "2026-10-25T04:13:18.760Z",
+      "updatedAt": "2026-10-25T04:13:18.760Z",
+      "lastAccessedAt": "2026-10-27T16:44:43.952Z",
+      "revision": 1,
+      "contentHash": "ee70dd8f5e066a73039ba08c6560df5838f846b24a252480ebd2a29b13123f39",
+      "sizeBytes": 7518,
+      "memoryBodyIds": []
+    },
+    {
+      "id": "08377954-fdfb-4623-b6d7-11a2afbe0515",
+      "title": "扫码配对后用旧连接端口连不上：配对后持续重新浏览、最近广播优先与 connect 假成功复核（2026-10-25）",
+      "description": "无 server 与有 server 两条路由都固化了配对前的 connect 端口；改为 3 秒一次、20 秒期限的重复浏览，候选按 SRV LastSeenUtc 倒序，host:connect 后用 devices-l 复核非 offline，含测试数字与真机未验证边界。",
+      "status": "active",
+      "filename": "connect-2026-10-25-08377954.md",
+      "relativePath": "documents/active/connect-2026-10-25-08377954.md",
+      "sourcePaths": [
+        "UotanStudio.Comm/Protocols/Adb/Pairing/AdbQrPairingService.cs",
+        "UotanStudio.Comm/Transports/Udp/AdbMdnsDiscovery.cs",
+        "UotanStudio.Comm/Transports/Udp/MdnsDevice.cs",
+        "UotanStudio.Tests/Devices/AdbPairingDiscoveryTests.cs",
+        "VERIFICATION.md"
+      ],
+      "sessionIds": [
+        "795019da-4736-4a26-8957-65806cd11043"
+      ],
+      "createdAt": "2026-10-25T13:14:09.183Z",
+      "updatedAt": "2026-10-25T13:14:09.183Z",
+      "lastAccessedAt": "2026-10-26T20:00:58.883Z",
+      "revision": 1,
+      "contentHash": "d2e2b3651252cfd58cd34d25ded3385b60311b5f660a496e3df131bb898e30b8",
+      "sizeBytes": 5602,
+      "memoryBodyIds": []
+    },
+    {
+      "id": "1ef3d725-4431-4b09-a93d-30a1020277a0",
+      "title": "同一设备双端点根治：扫码配对后重读 server mDNS 表 + 宿主侧端点单一化（2026-10-25）",
+      "description": "日志中同一手机同时出现 adb-tcp 旧端口与 server 新端点的根因（持久化 pairedNetworkTargets 过期）与修复：host:pair 后重读 host:mdns:services、host:devices-l 复核非 offline、直连失败重解析端点、扫描期对齐/同主机去重/删除旧目标、mDNS LastSeenUtc 取最新广播；含验证数字与未验证边界。",
+      "status": "active",
+      "filename": "server-mdns-2026-10-25-1ef3d725.md",
+      "relativePath": "documents/active/server-mdns-2026-10-25-1ef3d725.md",
+      "sourcePaths": [
+        "UotanStudio.Comm/Protocols/Adb/Pairing/AdbQrPairingService.cs",
+        "UotanStudio.Comm/Transports/Udp/AdbMdnsDiscovery.cs",
+        "UotanStudio.Comm/Transports/Udp/MdnsDevice.cs",
+        "UotanStudio/Services/Devices/DeviceMonitorService.Discovery.cs",
+        "UotanStudio/Services/Devices/DeviceMonitorService.Pairing.cs",
+        "UotanStudio/Services/Devices/DeviceMonitorService.Remote.cs",
+        "UotanStudio.Tests/Devices/AdbPairingDiscoveryTests.cs",
+        "UotanStudio.Tests/Devices/AdbRemoteRoutingTests.cs",
+        "VERIFICATION.md"
+      ],
+      "sessionIds": [
+        "279c8514-7738-4273-8df9-64853a5260ad"
+      ],
+      "createdAt": "2026-10-25T15:48:43.356Z",
+      "updatedAt": "2026-10-25T15:48:43.356Z",
+      "lastAccessedAt": "2026-11-02T01:12:35.482Z",
+      "revision": 1,
+      "contentHash": "eaecf28111d5af726ca7ee1bb6442d4c807373f8e9ef7ddb92ae5f84f65d1d86",
+      "sizeBytes": 5948,
+      "memoryBodyIds": []
+    },
+    {
+      "id": "cd5e7bab-64ff-4918-887a-bab9cd978987",
+      "title": "配对后设备重启 TLS 服务导致死会话复用：传输真实状态与共享池无条件淘汰（2026-10-26）",
+      "description": "真机 mDNS 抓包证明无 server 直连端口已正确（192.168.1.144:45105），失败根因是配对后 adbd 重启 TLS 服务使旧连接失效而 AdbTlsTransport 仍报已连接、共享会话池继续复用；含失效标记、无条件淘汰、端点改写后刷新界面、30 秒端口解析加固、文件清单与 7363/7357 验证数字。",
+      "status": "active",
+      "filename": "tls-2026-10-26-cd5e7bab.md",
+      "relativePath": "documents/active/tls-2026-10-26-cd5e7bab.md",
+      "sourcePaths": [
+        "UotanStudio.Comm/Transports/Tcp/AdbTlsTransport.cs",
+        "UotanStudio.Comm/Protocols/Adb/AdbConnection.cs",
+        "UotanStudio.Comm/Protocols/Adb/Pairing/AdbQrPairingService.cs",
+        "UotanStudio/Services/Devices/DeviceMonitorService.SharedAdb.cs",
+        "UotanStudio/Services/Devices/DeviceMonitorService.Remote.cs",
+        "UotanStudio/Services/Devices/DeviceMonitorService.Sessions.cs",
+        "UotanStudio/Services/Devices/DeviceMonitorService.Logs.cs",
+        "UotanStudio/Services/Devices/DeviceMonitorService.Transactions.cs",
+        "VERIFICATION.md"
+      ],
+      "sessionIds": [
+        "2c4a8326-f586-4994-96ca-36032e50f361"
+      ],
+      "createdAt": "2026-10-25T18:02:42.584Z",
+      "updatedAt": "2026-10-25T18:02:42.584Z",
+      "lastAccessedAt": "2026-10-27T12:41:33.937Z",
+      "revision": 1,
+      "contentHash": "2127fa6fc38fe954d563e666f66ab6b31e0f3d4d1368d2b4f7647267a1e328f1",
+      "sizeBytes": 7075,
+      "memoryBodyIds": []
+    },
+    {
+      "id": "dddf19d9-142d-4ea5-a267-24369c23a9f0",
+      "title": "ADB 交互式 shell 无法打开：5 秒空闲读期限击穿托管 TLS 记录层（2026-10-26）",
+      "description": "无 server 直连 ADB 时 shell 报“target is not ready”/closed-failed TLS 连接的根因链（空闲读期限 → BouncyCastle 托管 TLS 致命关闭 → 死会话占租约）、读/写期限分离与 SO_KEEPALIVE 修复、共享池立即淘汰、验证数字与未验证的真机边界。",
+      "status": "active",
+      "filename": "adb-shell-5-tls-2026-10-26-dddf19d9.md",
+      "relativePath": "documents/active/adb-shell-5-tls-2026-10-26-dddf19d9.md",
+      "sourcePaths": [
+        "UotanStudio.Comm/Protocols/Adb/AdbConnection.cs",
+        "UotanStudio.Comm/Transports/Tcp/AdbTlsTransport.cs",
+        "UotanStudio.Comm/Transports/Tcp/TcpKeepAlive.cs",
+        "UotanStudio/Services/Devices/DeviceMonitorService.SharedAdb.cs",
+        "UotanStudio.Tests/Protocols/AdbRemoteProtocolTests.cs"
+      ],
+      "sessionIds": [
+        "5e1e0a00-c8fc-4764-b6f1-918becc3cacc"
+      ],
+      "createdAt": "2026-10-25T20:56:30.955Z",
+      "updatedAt": "2026-10-25T20:56:30.955Z",
+      "lastAccessedAt": "2026-10-26T20:15:02.090Z",
+      "revision": 1,
+      "contentHash": "c92a9d13cf7effa5711de02a1faa2e40823c17fb8732834fed8c0ce7da6f8988",
+      "sizeBytes": 6036,
+      "memoryBodyIds": []
+    },
+    {
+      "id": "7eea27ea-914e-4b61-a137-7f2c1eaf6822",
+      "title": "单容器多张 GPT 表：表来源选择、副本回写规则与 1 MiB 探测窗口（UotanStudio）",
+      "description": "ptable.img 三份 GPT 副本（LBA 1 空表 / 257 46 分区 / 291 118 分区）导致分区编辑器读到 0 分区的根因、GptImageEditor 按分区数选表与只回写镜像/空副本的规则、DocumentFormatPolicy 探测窗口 64 KiB→1 MiB，以及实测分区数与测试数字。",
+      "status": "active",
+      "filename": "gpt-1-mib-uotanstudio-7eea27ea.md",
+      "relativePath": "documents/active/gpt-1-mib-uotanstudio-7eea27ea.md",
+      "sourcePaths": [
+        "UotanStudio.Firmware/BlockImage/Gpt/GptImageEditor.cs",
+        "UotanStudio.Firmware/BlockImage/Gpt/GptTableCopy.cs",
+        "UotanStudio/ViewModels/Editors/PartitionEditorViewModel.cs",
+        "UotanStudio/Services/Workspace/Documents/DocumentFormatPolicy.cs"
+      ],
+      "sessionIds": [
+        "fea3836a-5879-4362-8d26-17479b3579cf"
+      ],
+      "createdAt": "2026-10-26T04:29:46.350Z",
+      "updatedAt": "2026-10-26T04:29:46.350Z",
+      "lastAccessedAt": "2026-10-27T13:24:25.057Z",
+      "revision": 1,
+      "contentHash": "b36a5a6ab966da48b7eff5bc2bc1d0f51a3c297845881e0de331400ba991312a",
+      "sizeBytes": 4709,
+      "memoryBodyIds": []
+    },
+    {
+      "id": "b3f83b64-e6de-4c4f-b765-00d33be373e2",
+      "title": "ADB 直连三重根因：入站 CRC 校验误拒 CNXN、托管 TLS 全双工死锁、组播被过滤后的单播 DNS-SD 兜底（2026-10-26）",
+      "description": "无 server 直连 ADB 的三个真实根因与修复：入站 data_check 校验偏离上游 AOSP、BouncyCastle 托管 TLS 用信号量串行化 await 读写导致消息循环死锁、网络过滤组播 mDNS 时改用设备 5353 单播 DNS-SD；含上游源码依据、改动文件、真机验证与非破坏性边界。",
+      "status": "active",
+      "filename": "adb-crc-cnxn-tls-dns-sd-2026-10-26-b3f83b64.md",
+      "relativePath": "documents/active/adb-crc-cnxn-tls-dns-sd-2026-10-26-b3f83b64.md",
+      "sourcePaths": [
+        "UotanStudio.Comm/Protocols/Adb/AdbConnection.cs",
+        "UotanStudio.Comm/Protocols/Adb/AdbConstants.cs",
+        "UotanStudio.Comm/Transports/Tcp/AdbTlsTransport.cs",
+        "UotanStudio.Comm/Protocols/Adb/Pairing/AdbQrPairingService.cs",
+        "UotanStudio.Comm/Protocols/Adb/AdbSyncClient.V2.cs",
+        "reference/adb-aosp/transport.cpp",
+        "VERIFICATION.md"
+      ],
+      "sessionIds": [
+        "7af82c6b-aecb-402d-8d1b-8b4bad0a14f0"
+      ],
+      "createdAt": "2026-10-26T05:58:58.010Z",
+      "updatedAt": "2026-10-26T05:58:58.010Z",
+      "lastAccessedAt": "2026-10-26T20:15:02.090Z",
+      "revision": 1,
+      "contentHash": "5d918b95d29ff956dae7f932b5ebcee554206b3651c7a2349823387f241a960b",
+      "sizeBytes": 5922,
+      "memoryBodyIds": []
+    },
+    {
+      "id": "1ded92c8-51ea-4402-b7f3-22f6b828ab17",
+      "title": "HarmonyOS update.bin 容器格式解析与 UotanStudio 只读处理器实现（2026-10-26）",
+      "description": "HarmonyOS update.bin 的头部/组件表 L1-L2 布局、元数据 TLV、输出命名算法与 UotanStudio 只读处理器的接入点、真实样例实测哈希、测试与未验证边界。",
+      "status": "active",
+      "filename": "harmonyos-update-bin-uotanstudio-2026-10-26-1ded92c8.md",
+      "relativePath": "documents/active/harmonyos-update-bin-uotanstudio-2026-10-26-1ded92c8.md",
+      "sourcePaths": [
+        "UotanStudio.Firmware/VendorFirmware/HarmonyOS/HarmonyUpdateBinReader.cs",
+        "UotanStudio.Firmware/VendorFirmware/HarmonyOS/HarmonyUpdateBinFormatHandler.cs",
+        "UotanStudio.Firmware/VendorFirmware/HarmonyOS/HarmonyUpdateBinPackage.cs",
+        "UotanStudio.Firmware/VendorFirmware/HarmonyOS/HarmonyUpdateBinLayout.cs",
+        "UotanStudio.Firmware/VendorFirmware/HarmonyOS/HarmonyUpdateBinComponent.cs",
+        "UotanStudio.Firmware/VendorFirmware/HarmonyOS/HarmonyUpdateBinSignatureKind.cs",
+        "UotanStudio.Tests/Firmware/HarmonyUpdateBinTests.cs",
+        "UotanStudio.Firmware/Application/Formats/FirmwareFormatRegistry.cs",
+        "VERIFICATION.md"
+      ],
+      "sessionIds": [
+        "cb232d97-1587-4fe2-9fe7-462b70dc3faf"
+      ],
+      "createdAt": "2026-10-26T07:53:17.356Z",
+      "updatedAt": "2026-10-26T07:53:17.356Z",
+      "lastAccessedAt": "2026-10-27T13:24:25.057Z",
+      "revision": 1,
+      "contentHash": "05f161f11cce45ec2346cec18aac54d43b22e0812350ce941c56e1bb88c2c4cd",
+      "sizeBytes": 8313,
+      "memoryBodyIds": []
+    },
+    {
+      "id": "1a938c45-c97d-4c43-98ad-de5dad94a08e",
+      "title": "ADB 无线调试 TLS 不能钉扎服务端证书：adbd 每次握手重建证书（2026-10-26）",
+      "description": "无线 ADB 投屏报「设备未连接」的根因是客户端按 host:port 钉扎 adbd 服务端证书指纹，而 adbd 每进程随机生成密钥、每次握手重建自签证书；含上游 AOSP 依据（adbd_auth_tls_handshake、x509_generator、transport.cpp 接受任意证书）、移除钉扎的改动面、客户端密钥被拒告警到可操作文案的映射、测试与未验证的真机边界。",
+      "status": "active",
+      "filename": "adb-tls-adbd-2026-10-26-1a938c45.md",
+      "relativePath": "documents/active/adb-tls-adbd-2026-10-26-1a938c45.md",
+      "sourcePaths": [
+        "UotanStudio.Comm/Transports/Tcp/AdbTlsTransport.cs",
+        "UotanStudio.Comm/Devices/Services/DeviceController.Inventory.cs",
+        "UotanStudio/Services/Devices/DeviceMonitorService.Sessions.cs",
+        "UotanStudio/Services/SettingsPersistenceService.cs",
+        "UotanStudio.Tests/Devices/AdbTlsTransportTests.cs",
+        "UotanStudio.Comm/README.md",
+        "VERIFICATION.md",
+        "reference/adb-android16/daemon/auth.cpp",
+        "reference/adb-android16/crypto/x509_generator.cpp",
+        "reference/adb-android16/transport.cpp"
+      ],
+      "sessionIds": [
+        "8fe75a18-415e-4168-b37d-bd9aa507018e"
+      ],
+      "createdAt": "2026-10-26T16:59:32.044Z",
+      "updatedAt": "2026-10-26T16:59:32.044Z",
+      "lastAccessedAt": "2026-10-28T05:22:29.653Z",
+      "revision": 1,
+      "contentHash": "6af9f8bff6c3341090323cc4f5f788e05d728d4504cebc631ccd176b721951ea",
+      "sizeBytes": 6119,
+      "memoryBodyIds": []
+    },
+    {
+      "id": "aebcadc9-f15a-4be7-97f2-2d7676ce4f5a",
+      "title": "投屏输入注入预检（com.android.shell INJECT_EVENTS）+ 指针捕获触摸注入（2026-10-27）",
+      "description": "scrcpy 投屏“触摸/按键被设备拦截”的只读预检契约（三态判定、复用共享 ADB 会话、3 秒节流重检、标题栏橙色提示）、鼠标指针捕获式触摸注入与本地化键，含验证数字与真机未验证边界。",
+      "status": "active",
+      "filename": "com-android-shell-inject-events-2026-10-27-aebcadc9.md",
+      "relativePath": "documents/active/com-android-shell-inject-events-2026-10-27-aebcadc9.md",
+      "sourcePaths": [
+        "UotanStudio/Services/Devices/InputInjectionProbe.cs",
+        "UotanStudio/Services/Devices/DeviceMonitorService.Operations.cs",
+        "UotanStudio/ViewModels/Editors/ScreenMirrorViewModel.cs",
+        "UotanStudio/Views/Editors/ScreenMirrorView.axaml",
+        "UotanStudio/Views/Editors/ScreenMirrorView.axaml.cs",
+        "UotanStudio/Locale/Common.resx",
+        "UotanStudio/Locale/Common.zh-CN.resx",
+        "UotanStudio/Locale/LocaleKeySets.cs",
+        "UotanStudio.Tests/Devices/InputInjectionProbeTests.cs",
+        "VERIFICATION.md"
+      ],
+      "sessionIds": [
+        "f7f35dee-5a0c-4b27-95fb-7003def74c16"
+      ],
+      "createdAt": "2026-10-26T18:15:45.668Z",
+      "updatedAt": "2026-10-26T18:15:45.668Z",
+      "lastAccessedAt": "2026-11-02T01:10:36.184Z",
+      "revision": 1,
+      "contentHash": "da60426434cc261d0da06c1636f1c27f1e80d9c18188d5ce64ddc70cc155de17",
+      "sizeBytes": 6328,
+      "memoryBodyIds": []
+    },
+    {
+      "id": "29e848c6-e9d3-41ce-99d8-18b71d2caca4",
+      "title": "无 mDNS 广播时的 ADB 直连端口发现：有界 TCP 扫描 + 握手校验兜底（2026-10-27）",
+      "description": "扫码配对成功后设备不广播 _adb-tls-connect 的真机证据（仅 44065 开放、首帧 STLS）、TcpPortScanner 有界并发扫描与 AdbSecureSessionFactory 抽取、每端口需完成 ADB 握手才接受、测试与未验证边界。",
+      "status": "active",
+      "filename": "mdns-adb-tcp-2026-10-27-29e848c6.md",
+      "relativePath": "documents/active/mdns-adb-tcp-2026-10-27-29e848c6.md",
+      "sourcePaths": [
+        "UotanStudio.Comm/Transports/Tcp/TcpPortScanner.cs",
+        "UotanStudio.Comm/Protocols/Adb/AdbSecureSessionFactory.cs",
+        "UotanStudio.Comm/Protocols/Adb/Pairing/AdbQrPairingService.cs",
+        "UotanStudio.Comm/Devices/Services/DeviceController.Inventory.cs",
+        "UotanStudio.Tests/Devices/TcpPortScannerTests.cs",
+        "VERIFICATION.md"
+      ],
+      "sessionIds": [
+        "01edf49b-0259-46e4-8fbe-5c57a0ae500b"
+      ],
+      "createdAt": "2026-10-26T18:59:59.006Z",
+      "updatedAt": "2026-10-26T18:59:59.006Z",
+      "lastAccessedAt": "2026-10-26T19:16:39.467Z",
+      "revision": 1,
+      "contentHash": "0334e346faae5ee9d27bd059e8844edc4e195223c5999b82f49357aaee6ac731",
+      "sizeBytes": 5181,
+      "memoryBodyIds": []
+    },
+    {
+      "id": "8d80767c-a89a-4634-a807-3e98c962ed3e",
+      "title": "ADB 无线配对连接端口：对齐 AOSP 的 GUID 实例名链路，扫描改为并行兜底（2026-10-27）",
+      "description": "AOSP adbd 以 persist.adb.wifi.guid 为实例名注册 _adb-tls-connect（端口=TlsServer::port()）的逐文件证据，配对返回 GUID 精确实例名直查、known-host 身份判定对齐、广播与有界扫描并行（10s/768 并发），7.3s 命中 44065 的实测与未验证边界。",
+      "status": "active",
+      "filename": "adb-aosp-guid-2026-10-27-8d80767c.md",
+      "relativePath": "documents/active/adb-aosp-guid-2026-10-27-8d80767c.md",
+      "sourcePaths": [
+        "UotanStudio.Comm/Protocols/Adb/Pairing/AdbQrPairingService.cs",
+        "UotanStudio.Comm/Transports/Udp/AdbMdnsDiscovery.cs",
+        "UotanStudio.Comm/Transports/Udp/MdnsDevice.cs",
+        "UotanStudio.Comm/Transports/Tcp/TcpPortScanner.cs",
+        "UotanStudio.Comm/Protocols/Adb/AdbSecureSessionFactory.cs",
+        "UotanStudio.Tests/Devices/AdbConnectIdentityTests.cs",
+        "UotanStudio.Tests/Devices/TcpPortScannerTests.cs",
+        "VERIFICATION.md"
+      ],
+      "sessionIds": [
+        "b2ed2048-d793-4c82-a67b-71b21b1f372c"
+      ],
+      "createdAt": "2026-10-26T19:16:57.330Z",
+      "updatedAt": "2026-10-26T19:16:57.330Z",
+      "lastAccessedAt": "2026-10-31T16:10:45.257Z",
+      "revision": 1,
+      "contentHash": "ebbc8887ec138b17ef943a3c68d590a1d1514634a01f632a46597ab525bac596",
+      "sizeBytes": 6078,
+      "memoryBodyIds": []
+    },
+    {
+      "id": "94b8e112-b244-4a3d-8376-549a9d84dcd0",
+      "title": "设备 Shell 终端改为进程内 IPtyConnection：约 10 秒静默期根因与共享会话复用（2026-10-16）",
+      "description": "GUI 设备 shell 前 ~10 s 无可见输出的时间线拆解（设备层初始化/全量扫描/TLS 握手）、被排除的抢占与 PTY 假设、进程内 DeviceShellConnection 适配 IPtyConnection 的架构与接线链、验证数字与未验证边界。",
+      "status": "active",
+      "filename": "shell-iptyconnection-10-2026-10-16-94b8e112.md",
+      "relativePath": "documents/active/shell-iptyconnection-10-2026-10-16-94b8e112.md",
+      "sourcePaths": [
+        "UotanStudio/Services/Terminal/DeviceShellConnection.cs",
+        "UotanStudio.Desktop/Program.cs",
+        "UotanStudio/Services/Terminal/DeviceShellService.cs",
+        "UotanStudio.Tests/Devices/DeviceShellConnectionTests.cs"
+      ],
+      "sessionIds": [
+        "184d2d60-517b-4f6c-b0ba-cad632b044b6"
+      ],
+      "createdAt": "2026-10-26T20:15:28.062Z",
+      "updatedAt": "2026-10-26T20:15:28.062Z",
+      "lastAccessedAt": "2026-10-27T16:44:43.952Z",
+      "revision": 1,
+      "contentHash": "a3ed172144e6fc81bdabfe0bb3c9a88b8b980cbeb5883b6dc8f245bc778f3738",
+      "sizeBytes": 5743,
+      "memoryBodyIds": []
+    },
+    {
+      "id": "5cf3d40c-3504-4b41-a3a5-9157978b6c62",
+      "title": "RKDL（rockusb）后端补齐：flash 几何解码、528B 扇区写与擦除语义对齐 rkdeveloptool（2026-10）",
+      "description": "以上游 rkdeveloptool/rkdevtool 只读源码为准补齐 RKDL 协议后端：FLASHINFO/CAPABILITY 完整解码、WriteSector 528B/32 扇区上限、EraseBlocks 坏块容忍、EMMC ERASE_LBA 与 ERASE_FORCE 整盘擦除；含实测门禁数字、NativeAOT sourcelink 文件锁阻塞与未验证边界。",
+      "status": "active",
+      "filename": "rkdl-rockusb-flash-528b-rkdeveloptool-2026-10-5cf3d40c.md",
+      "relativePath": "documents/active/rkdl-rockusb-flash-528b-rkdeveloptool-2026-10-5cf3d40c.md",
+      "sourcePaths": [
+        "UotanStudio.Comm/Protocols/Bootrom/RkdlSession.Erase.cs",
+        "UotanStudio.Comm/Protocols/Bootrom/RkdlSession.Commands.cs",
+        "UotanStudio.Comm/Protocols/Bootrom/RkdlConstants.cs",
+        "UotanStudio.Tests/Protocols/RkdlFlashGeometryDecodeTests.cs",
+        "VERIFICATION.md"
+      ],
+      "sessionIds": [
+        "dbdffcbe-3a02-44f2-8271-f7ce44a3a91d"
+      ],
+      "createdAt": "2026-10-26T20:59:28.314Z",
+      "updatedAt": "2026-10-26T20:59:28.314Z",
+      "lastAccessedAt": "2026-11-01T06:07:25.064Z",
+      "revision": 1,
+      "contentHash": "0887a3d07d2a0ccf8361306f005f98051589d0fb4992712f92d640c1af5a47ad",
+      "sizeBytes": 5301,
+      "memoryBodyIds": []
+    },
+    {
+      "id": "b4c0eb13-4c71-4066-b8eb-d5e87d096ba1",
+      "title": "UotanStudio NativeAOT 发布瘦身与本地构建加速（2026-10-27）",
+      "description": "ILCompiler 原生 PDB 的关闭条件（DebugType=none）、去掉命令行 PublishAot 的依据、项目级构建实测耗时，以及发布不稳定等已知陷阱与未验证边界。",
+      "status": "active",
+      "filename": "uotanstudio-nativeaot-2026-10-27-b4c0eb13.md",
+      "relativePath": "documents/active/uotanstudio-nativeaot-2026-10-27-b4c0eb13.md",
+      "sourcePaths": [
+        "UotanStudio.Desktop/UotanStudio.Desktop.csproj",
+        ".github/workflows/release.yml",
+        "AGENTS.md",
+        "UotanStudio.Desktop/AGENTS.md"
+      ],
+      "sessionIds": [
+        "89eb8286-0db6-42ea-8633-4b1cde99c3cb"
+      ],
+      "createdAt": "2026-10-26T21:39:09.961Z",
+      "updatedAt": "2026-10-26T21:39:09.961Z",
+      "lastAccessedAt": "2026-11-01T06:10:18.628Z",
+      "revision": 1,
+      "contentHash": "28cf882febb9fe05c6d07b9c17cae177b8176b5ff0c5266425cddb5cd5137272",
+      "sizeBytes": 6283,
+      "memoryBodyIds": []
+    },
+    {
+      "id": "1d17fe25-755e-4d34-a207-81ee15fb1bde",
+      "title": "酷派 CPB 固件包布局与 UotanStudio 只读处理器（2026-10-27）",
+      "description": "酷派 CPB 552 字节头 + 76 字节镜像头的解码、密钥 0x66666667 高半乘（实为除 5）与 CRC 覆盖解码后头的两处参考实现怪癖、固件层处理器与宿主接线、魔数规则重生成、测试与 NativeAOT 实测数字、CS2012 artifacts-path 环境坑与未验证边界。",
+      "status": "active",
+      "filename": "cpb-uotanstudio-2026-10-27-1d17fe25.md",
+      "relativePath": "documents/active/cpb-uotanstudio-2026-10-27-1d17fe25.md",
+      "sourcePaths": [
+        "UotanStudio.Firmware/VendorFirmware/Coolpad/Cpb/CpbFormat.cs",
+        "UotanStudio.Firmware/VendorFirmware/Coolpad/Cpb/CpbFormatHandler.cs",
+        "UotanStudio.Tests/Firmware/CpbTests.cs",
+        "UotanStudio.Tests/TestInfrastructure/CpbContainerBuilder.cs",
+        "UotanStudio/Services/Firmware/ImageInputService.cs",
+        "UotanStudio.Firmware/Application/Formats/FirmwareFormatRegistry.cs",
+        "UotanStudio.Firmware.MagicGen/corpus/Magdir/uotan-firmware",
+        "VERIFICATION.md"
+      ],
+      "sessionIds": [
+        "5bb67545-8225-420f-b693-9b586d950279"
+      ],
+      "createdAt": "2026-10-26T21:43:35.560Z",
+      "updatedAt": "2026-10-26T21:43:35.560Z",
+      "lastAccessedAt": "2026-10-31T16:10:45.257Z",
+      "revision": 1,
+      "contentHash": "4d8624fdb08c6218aaa18d304f7cd9ff10c57c620839e3346a1b927886bf8fe1",
+      "sizeBytes": 7091,
+      "memoryBodyIds": []
+    },
+    {
+      "id": "6932403a-9982-4006-9bff-c84d127ccbdc",
+      "title": "编解码与常量权威收敛（依赖清理第 1–5 批）",
+      "description": "UotanStudio 把第三方压缩库、FNV 常量、ZIP 结构与稀疏魔数收敛到唯一权威项目的一次实施记录：五条权威、守卫测试 CodecAuthorityGuardTests、稀疏魔数必须放 Core 的循环边理据、白名单理由、实测验证数字与未验证边界。",
+      "status": "active",
+      "filename": "1-5-6932403a.md",
+      "relativePath": "documents/active/1-5-6932403a.md",
+      "sourcePaths": [
+        "AGENTS.md",
+        "UotanStudio.Compress/Codecs/Zstd/ZstdEncoder.cs",
+        "UotanStudio.Compress/Codecs/Zstd/ZstdDecoder.cs",
+        "UotanStudio.Compress/Codecs/Lzma/LzmaEncoder.cs",
+        "UotanStudio.Compress/Zip/ZipContainer.cs",
+        "UotanStudio.Hash/Fnv1a/Fnv1a64.cs",
+        "UotanStudio.Firmware/Core/BlockImageMagic.cs",
+        "UotanStudio.Delivery/Build/Package.cs",
+        "UotanStudio.Tests/Firmware/Architecture/CodecAuthorityGuardTests.cs"
+      ],
+      "sessionIds": [
+        "303e6920-47c1-4e07-a88f-471b3135a9ba"
+      ],
+      "createdAt": "2026-10-26T22:43:03.182Z",
+      "updatedAt": "2026-10-26T22:43:03.182Z",
+      "lastAccessedAt": "2026-10-28T18:23:49.613Z",
+      "revision": 1,
+      "contentHash": "e20744d93bf6d1e6e300570a3bd648abe8668e9e9545fa14d6f7de587735a49c",
+      "sizeBytes": 6145,
+      "memoryBodyIds": []
+    },
+    {
+      "id": "e4227efe-8c13-4001-a3a6-a01ec226c99d",
+      "title": "AVB 全链签名/页脚/OTA 能力与宿主 AVB 工具实施（UotanStudio，2026-10-27）",
+      "description": "AVB 密钥/页脚/校验/OTA 载荷修补的固件层新增 API（AvbDescriptorTable、AvbSigner 部分类、AvbImageVerifier、PayloadPatcher、PayloadSignatureVerifier）、宿主 AvbOtaService 与 Tools→AVB 工具接线、实测测试与 NativeAOT 数字、真实厂商 OTA 与 GUI 等未验证边界。",
+      "status": "active",
+      "filename": "avb-ota-avb-uotanstudio-2026-10-27-e4227efe.md",
+      "relativePath": "documents/active/avb-ota-avb-uotanstudio-2026-10-27-e4227efe.md",
+      "sourcePaths": [
+        "UotanStudio.Firmware/BootSecurity/Avb/Signing/AvbDescriptorTable.cs",
+        "UotanStudio.Firmware/BootSecurity/Avb/Signing/AvbSigner.DescriptorTable.cs",
+        "UotanStudio.Firmware/BootSecurity/Avb/Signing/AvbSigner.Footer.cs",
+        "UotanStudio.Firmware/BootSecurity/Avb/Verification/AvbImageVerifier.cs",
+        "UotanStudio.Firmware/OtaDelta/Payload/PayloadPatcher.cs",
+        "UotanStudio.Firmware/OtaDelta/Payload/Verification/PayloadSignatureVerifier.cs",
+        "UotanStudio/Services/Firmware/AvbOtaService.cs",
+        "UotanStudio/ViewModels/Shell/AvbToolViewModel.cs",
+        "UotanStudio/Views/Shell/AvbToolWindow.axaml",
+        "UotanStudio.Delivery/Build/OtaZipPatchService.cs",
+        "UotanStudio/UiAbstractions/IWindowService.cs",
+        "UotanStudio/ViewModels/Shell/MenuViewModel.cs",
+        "UotanStudio.Tests/Services/AvbOtaServiceTests.cs",
+        "UotanStudio.Tests/Firmware/AvbImageVerifierTests.cs",
+        "UotanStudio.Tests/Firmware/AvbFooterRemovalTests.cs",
+        "UotanStudio.Tests/Firmware/AvbDescriptorTableTests.cs",
+        "UotanStudio.Tests/Firmware/PayloadPatcherPublicTests.cs",
+        "VERIFICATION.md"
+      ],
+      "sessionIds": [
+        "a9104abb-0c6f-4e61-8a67-ce58559cfe85"
+      ],
+      "createdAt": "2026-10-26T23:37:04.667Z",
+      "updatedAt": "2026-10-26T23:37:04.667Z",
+      "lastAccessedAt": "2026-10-30T05:00:24.279Z",
+      "revision": 1,
+      "contentHash": "e546fbe7a0eee7f26f1a4afcb4069e99d2f611e3360d3213cdcfafc47f9fa7ac",
+      "sizeBytes": 6682,
+      "memoryBodyIds": []
+    },
+    {
+      "id": "dbc55a39-9383-4727-8bef-35f5705f8b77",
+      "title": "UotanStudio 注释规范化：审计口径、分批范围与实测基线",
+      "description": "全仓注释清理的可复用方法：四类判定口径与保留的假阳性、按目录互斥分批的并发纪律、实测残留基线与优先顺序、未启用 GenerateDocumentationFile 的项目隐藏 XML 结构错误（含 11 处具体位置）以及构建/格式化验证门。",
+      "status": "active",
+      "filename": "uotanstudio-dbc55a39.md",
+      "relativePath": "documents/active/uotanstudio-dbc55a39.md",
+      "sourcePaths": [
+        "AGENTS.md",
+        "UotanStudio/Services/Devices/DevicePropertyReader.cs",
+        "UotanStudio.Benchmarks/Firmware/SparseDatBenchmarks.cs",
+        "UotanStudio.Comm/Protocols/Adb/AdbAuthentication.cs",
+        "UotanStudio.Comm/Protocols/Edl/Streaming/StreamingBadBlockTable.cs",
+        "UotanStudio.Tests/Firmware/DtsCoverageTests.cs",
+        "UotanStudio.Delivery/Models/Plan.cs"
+      ],
+      "sessionIds": [
+        "ed1bad61-827b-4065-9348-831f14f225c8"
+      ],
+      "createdAt": "2026-10-27T00:27:45.076Z",
+      "updatedAt": "2026-10-27T00:27:45.076Z",
+      "lastAccessedAt": "2026-10-27T01:19:11.988Z",
+      "revision": 1,
+      "contentHash": "51d2be8d10af9486b2265200f7e00eeedea9eaab547aec001ee4df6ffb4c59bd",
+      "sizeBytes": 5586,
+      "memoryBodyIds": []
+    },
+    {
+      "id": "2d0db777-3b1d-4d91-a144-cb2bfb14f7c9",
+      "title": "UotanStudio 并发写入下的提交前门禁与分批提交（2026-10-27）",
+      "description": "外部脚本并发改写工作区时的静止快照门禁程序、whitespace 失败修复方式、提交顺序约束、NativeAOT 第三方警告基线与 AVB 未验证边界。",
+      "status": "active",
+      "filename": "uotanstudio-2026-10-27-2d0db777.md",
+      "relativePath": "documents/active/uotanstudio-2026-10-27-2d0db777.md",
+      "sourcePaths": [
+        "AGENTS.md",
+        "UotanStudio.Tests/AGENTS.md",
+        "Directory.Packages.props",
+        "UotanStudio.Desktop/UotanStudio.Desktop.csproj"
+      ],
+      "sessionIds": [
+        "a6687988-7cb3-4ff2-9d4d-a6018d2fac4f"
+      ],
+      "createdAt": "2026-10-27T01:20:00.254Z",
+      "updatedAt": "2026-10-27T01:20:00.254Z",
+      "lastAccessedAt": "2026-11-02T05:28:07.185Z",
+      "revision": 1,
+      "contentHash": "23e629b49df523bc5b98d1afad04d03c4c0bad0b015a10ec5bb8cb9bf76aed4f",
+      "sizeBytes": 4689,
+      "memoryBodyIds": []
+    },
+    {
+      "id": "896d5b33-3b4c-4126-bb54-75943ef8bc61",
+      "title": "设备显示名与 A/B 槽位：平台名拼接、ParseSlot 映射与 adb 链路类别推断（UotanStudio）",
+      "description": "顶部设备选择框与设备管理器共用的 DisplayName/StateLabel 规则：Android/HarmonyOS 平台名、Slot A/B 拼接与 A-only 抑制、_a→Slot A 解析、adb devices-l 缺 usb: 描述符时的 TCP/USB 推断，含测试结果与未验证边界。",
+      "status": "active",
+      "filename": "a-b-parseslot-adb-uotanstudio-896d5b33.md",
+      "relativePath": "documents/active/a-b-parseslot-adb-uotanstudio-896d5b33.md",
+      "sourcePaths": [
+        "UotanStudio/ViewModels/Devices/DeviceInfo.cs",
+        "UotanStudio/ViewModels/Devices/DeviceViewModel.Details.cs",
+        "UotanStudio/ViewModels/Devices/DeviceViewModel.Hdc.cs",
+        "UotanStudio/Services/Devices/DevicePropertyReader.cs",
+        "UotanStudio/Services/Devices/DeviceMonitorService.Discovery.cs",
+        "UotanStudio.Comm/Protocols/Adb/AdbTargetInfo.cs",
+        "UotanStudio/Comm/Devices/Services/DebugBridgeSessionOpener.cs",
+        "UotanStudio.Tests/Devices/DeviceLinkDisplayTests.cs",
+        "UotanStudio.Tests/Devices/DevicePropertyReaderTests.cs",
+        "UotanStudio.Tests/Protocols/AdbTargetInfoTests.cs"
+      ],
+      "sessionIds": [
+        "acaf18b2-33b9-4043-9ba7-561818ec5da6"
+      ],
+      "createdAt": "2026-10-27T12:41:55.108Z",
+      "updatedAt": "2026-10-27T12:41:55.108Z",
+      "lastAccessedAt": "2026-10-28T16:09:40.973Z",
+      "revision": 1,
+      "contentHash": "f4d91959f9a5493d0105b90d775ba706de431d8bf9696eebe1dbb6df59df67de",
+      "sizeBytes": 5005,
+      "memoryBodyIds": []
+    },
+    {
+      "id": "ef58c9e1-8522-4442-a366-c48602055d04",
+      "title": "顶部设备选择框变更通知链路与远程 DNS-SD 显示名裁短（UotanStudio）",
+      "description": "顶部选择框不刷新槽位的两处根因（SelectedDeviceName 未转发、下拉项 Header 主题绑定）、DeviceViewModel/MainWindow 的订阅与退订结构，以及 DeviceInfo.DisplayIdentity 对 adb DNS-SD 实例串号的裁短优先级规则与验证结果。",
+      "status": "active",
+      "filename": "dns-sd-uotanstudio-ef58c9e1.md",
+      "relativePath": "documents/active/dns-sd-uotanstudio-ef58c9e1.md",
+      "sourcePaths": [
+        "UotanStudio/ViewModels/Devices/DeviceViewModel.cs",
+        "UotanStudio/Views/Shell/MainWindow.axaml",
+        "UotanStudio/Views/Shell/MainWindow.axaml.cs",
+        "UotanStudio/ViewModels/Devices/DeviceInfo.cs",
+        "UotanStudio.Comm/Protocols/Adb/AdbTargetInfo.cs",
+        "UotanStudio.Tests/Devices/DeviceLinkDisplayTests.cs",
+        "UotanStudio.Tests/Protocols/AdbTargetInfoTests.cs"
+      ],
+      "sessionIds": [
+        "969a9a0a-3d11-4aea-a515-87ce66a51494"
+      ],
+      "createdAt": "2026-10-27T13:43:01.813Z",
+      "updatedAt": "2026-10-27T13:43:01.813Z",
+      "lastAccessedAt": "2026-11-02T00:56:06.060Z",
+      "revision": 1,
+      "contentHash": "a19e39d8e19abcf29c890c9ff95ce39ee20adbb6495092fd96c4604490e93b42",
+      "sizeBytes": 5291,
+      "memoryBodyIds": []
+    },
+    {
+      "id": "dcf19c6b-5892-46ea-9bf2-e2111d5bfa41",
+      "title": "窗口几何持久化与越界保护、资源管理器展开状态持久化（UotanStudio）",
+      "description": "主窗口大小/位置改存 settings.json 的 mainWindowPlacement、越界可视部分校验（≥48px）与提示后回落默认几何、解决方案 State 的 explorer 展开状态捕获/恢复结构，以及构建/测试/NativeAOT 发布实测结果与未验证的 GUI 边界。",
+      "status": "active",
+      "filename": "uotanstudio-dcf19c6b.md",
+      "relativePath": "documents/active/uotanstudio-dcf19c6b.md",
+      "sourcePaths": [
+        "UotanStudio/Services/SettingsPersistenceService.cs",
+        "UotanStudio/Services/Ui/Workspace/WorkspaceAutoSaveService.cs",
+        "UotanStudio/Services/Ui/Workspace/WindowPlacementValidator.cs",
+        "UotanStudio/Services/Ui/Workspace/WorkspaceSessionSnapshot.cs",
+        "UotanStudio/Services/Ui/Projects/ProjectOperationsService.cs",
+        "UotanStudio/ViewModels/Workspace/ExplorerExpansionState.cs",
+        "UotanStudio/ViewModels/Workspace/ProjectExplorerViewModel.cs",
+        "UotanStudio/ViewModels/Shell/SettingsViewModel.cs"
+      ],
+      "sessionIds": [
+        "a91e204e-b85d-4d08-8802-333b24166c9f"
+      ],
+      "createdAt": "2026-10-28T05:22:53.019Z",
+      "updatedAt": "2026-10-28T05:22:53.019Z",
+      "lastAccessedAt": "2026-10-28T12:51:09.017Z",
+      "revision": 1,
+      "contentHash": "b8f3703f8b4de768ac16a6a27b5de28a60b03c0ea469ae33c7264e6f7506567d",
+      "sizeBytes": 6980,
+      "memoryBodyIds": []
+    },
+    {
+      "id": "98d253d8-8f3c-4dfc-b71d-a7f2902eeaee",
+      "title": "子窗体打开集合与几何持久化缺口分析，及烧录侧边菜单展开状态持久化（UotanStudio）",
+      "description": "烧录界面侧边二级菜单（高通/联发科/全志/镜像操作）分组展开状态经 SettingsPersistenceService 持久化的实现与验证；以及子窗体（工具窗口/浮动 Dock 窗口）打开集合与大小位置未持久化的缺口分析、WindowPlacementValidator 复用与 Dock 布局序列化的实施拆解。",
+      "status": "active",
+      "filename": "uotanstudio-98d253d8.md",
+      "relativePath": "documents/active/uotanstudio-98d253d8.md",
+      "sourcePaths": [
+        "UotanStudio/Services/SettingsPersistenceService.cs",
+        "UotanStudio/ViewModels/Flash/FlashSectionState.cs",
+        "UotanStudio/ViewModels/Flash/FlashViewModel.Sections.cs",
+        "UotanStudio/Views/Shell/FlashView.axaml",
+        "UotanStudio/Views/UiWindowService.cs",
+        "UotanStudio/Services/Ui/Workspace/WorkspaceSessionSnapshot.cs",
+        "UotanStudio/Views/Workspace/WorkspaceDockFactory.cs",
+        "UotanStudio/Views/Shell/MainWindow.axaml.cs",
+        "UotanStudio/Services/Ui/Workspace/WindowPlacementValidator.cs",
+        "UotanStudio.Tests/Services/FlashSectionStateTests.cs"
+      ],
+      "sessionIds": [
+        "a88a4ea6-3350-4577-a4ff-52a4f32f52c7"
+      ],
+      "createdAt": "2026-10-28T12:51:38.478Z",
+      "updatedAt": "2026-10-28T12:51:38.478Z",
+      "lastAccessedAt": "2026-11-02T01:10:36.184Z",
+      "revision": 1,
+      "contentHash": "997ab1031e0cae1553ede1c8e4ed3429c80ea9feb24575d5dc0bfb5c9285764a",
+      "sizeBytes": 6527,
+      "memoryBodyIds": []
+    },
+    {
+      "id": "887976bc-7e87-4a39-9f1e-53ce4d9fa407",
+      "title": "Rockchip 烧录页接线与 RKDevTool v2.96 config.cfg 结构（2026-10）",
+      "description": "RKDevTool v2.96 控件/执行链还原、config.cfg 二进制结构（29B 头 + 610B 行）、UotanStudio 烧录页瑞芯微接线（cfg 服务、ViewModel 分部、XAML、本地化、测试）与已验证/未接线边界。",
+      "status": "active",
+      "filename": "rockchip-rkdevtool-v2-96-config-cfg-2026-10-887976bc.md",
+      "relativePath": "documents/active/rockchip-rkdevtool-v2-96-config-cfg-2026-10-887976bc.md",
+      "sourcePaths": [
+        "UotanStudio/Services/Flash/RockchipConfigFile.cs",
+        "UotanStudio/ViewModels/Flash/FlashViewModel.Rockchip.cs",
+        "UotanStudio/ViewModels/Flash/FlashViewModel.Operations.cs",
+        "UotanStudio/Views/Shell/FlashView.axaml",
+        "UotanStudio/Views/Shell/FlashView.axaml.cs",
+        "UotanStudio/Locale/LocaleKeySets.cs",
+        "UotanStudio.Tests/Services/RockchipConfigFileTests.cs"
+      ],
+      "sessionIds": [
+        "bbb6d4c5-e078-4987-bc03-0ca79497f44d"
+      ],
+      "createdAt": "2026-10-28T12:55:13.941Z",
+      "updatedAt": "2026-10-28T12:55:13.941Z",
+      "lastAccessedAt": "2026-11-01T06:38:44.668Z",
+      "revision": 1,
+      "contentHash": "1c364f92f1f00366822ae916e8d1bb4e51619d23b1a033be2df000912aa481f8",
+      "sizeBytes": 6694,
+      "memoryBodyIds": []
+    },
+    {
+      "id": "6e1bc9bf-cdf8-477b-83dc-aab69e6bbd6d",
+      "title": "UotanStudio Boot 补丁窗口在线版本与补丁包链路（2026-10-28）",
+      "description": "BootPatchWindow 在线版本/补丁包链路的设计落点：Net 叶子库 Release 列表与资产投影、宿主下载校验与原子发布、镜像测速与类型族校验、窗口接线、实测验证与未验证边界。",
+      "status": "active",
+      "filename": "uotanstudio-boot-2026-10-28-6e1bc9bf.md",
+      "relativePath": "documents/active/uotanstudio-boot-2026-10-28-6e1bc9bf.md",
+      "sourcePaths": [
+        "UotanStudio.Net/GitHub/GitHubReleaseClient.cs",
+        "UotanStudio.Net/GitHub/GitHubRelease.cs",
+        "UotanStudio.Net/Components/Root/RootPatchReleaseClient.cs",
+        "UotanStudio/Services/PatchPackages/RootPatchPackageService.cs",
+        "UotanStudio/Services/PatchPackages/RootPatchSources.cs",
+        "UotanStudio/Views/Shell/BootPatchWindow.axaml.cs",
+        "UotanStudio.Tests/Architecture/HostLayeringGuardTests.cs"
+      ],
+      "sessionIds": [
+        "52715689-9aab-46c5-befe-987111ca2a86"
+      ],
+      "createdAt": "2026-10-28T12:55:26.956Z",
+      "updatedAt": "2026-10-28T12:55:26.956Z",
+      "lastAccessedAt": "2026-10-30T05:00:24.279Z",
+      "revision": 1,
+      "contentHash": "096b146d187972db01687dcd73b6565b5f8e360efa086c4eed608368ebbf43c5",
+      "sizeBytes": 7040,
+      "memoryBodyIds": []
+    },
+    {
+      "id": "d4492e0c-2b02-4180-bcd1-0a7bbd190d14",
+      "title": "宿主组合根与装配收敛：显式工厂注册、装配单一事实源、参数对象（2026-10-28）",
+      "description": "UotanStudio 宿主三批次 DI/组合根整理：SharedHttpClient 与 MCP 单例入容器、约 280 处 LanguageService/LogService.Instance 改为注入、ShellComposition 唯一装配定义、DeliveryService/McpServerHost/会话工厂契约化；含 0 警告构建、定向测试与 AOT 发布 EXIT=0 的实测，以及 IServiceScope/loggerFactory/静态编解码入口未做的理由。",
+      "status": "active",
+      "filename": "2026-10-28-d4492e0c.md",
+      "relativePath": "documents/active/2026-10-28-d4492e0c.md",
+      "sourcePaths": [
+        "UotanStudio/Composition/ServiceRegistration.cs",
+        "UotanStudio/Composition/ShellComposition.cs",
+        "UotanStudio/Services/Network/SharedHttpClient.cs",
+        "UotanStudio/Services/Mcp/McpExposureService.cs",
+        "UotanStudio/App.axaml.cs",
+        "UotanStudio.Mcp/McpServerComposition.cs",
+        "UotanStudio.Mcp/McpServerHost.cs",
+        "UotanStudio.Delivery/Build/DeliveryService.cs",
+        "UotanStudio.Comm/Devices/Services/Sessions/DefaultDeviceSessionFactories.cs"
+      ],
+      "sessionIds": [
+        "c4f93ef8-b005-4b07-a19a-4c6b917fc78d"
+      ],
+      "createdAt": "2026-10-28T13:20:19.626Z",
+      "updatedAt": "2026-10-28T13:20:19.626Z",
+      "lastAccessedAt": "2026-11-02T01:12:35.482Z",
+      "revision": 1,
+      "contentHash": "c87bfb0af69fbad70a5d4e75e542ef77658f13b579e64e422411ab00e54ee4e5",
+      "sizeBytes": 5707,
+      "memoryBodyIds": []
+    },
+    {
+      "id": "a11fe850-25f2-4449-9cbd-103b94411c53",
+      "title": "UotanStudio GitHub 镜像源清单维护规程",
+      "description": "HttpDownload.MirrorSites 镜像前缀清单的落点、准入判定、实测证据（删 rapidgit/tbedu、加 g.blfrp.cn）、枚举与测试验证步骤及工作区陷阱。",
+      "status": "active",
+      "filename": "uotanstudio-github-a11fe850.md",
+      "relativePath": "documents/active/uotanstudio-github-a11fe850.md",
+      "sourcePaths": [
+        "UotanStudio.Net/Http/HttpDownload.cs",
+        "UotanStudio.Net/GitHub/GitHubMirrorSite.cs",
+        "UotanStudio.Tests/Net/HttpDownloadMirrorUrlTests.cs"
+      ],
+      "sessionIds": [
+        "af5c5934-5c88-4af7-bd63-0dc4db94ae3e"
+      ],
+      "createdAt": "2026-10-28T13:36:48.335Z",
+      "updatedAt": "2026-10-28T13:36:48.335Z",
+      "lastAccessedAt": "2026-10-29T00:44:27.865Z",
+      "revision": 1,
+      "contentHash": "4e02fe1ed79a23dbf2b2db457a06f06bf9be699debb2185bef53f6698f3c0450",
+      "sizeBytes": 4840,
+      "memoryBodyIds": []
+    },
+    {
+      "id": "4824dc1f-7c5c-4c92-b4df-7c87c0e0bcef",
+      "title": "UotanStudio 下载源测速与最优源固定（Boot 补丁链路）",
+      "description": "Boot 补丁窗口启动即对所有镜像与源站测速、固定最快源供后续下载复用：HttpDownload 选源契约、服务/窗口接线、清单为何保留源站的信任理由、实测结果与未验证边界。",
+      "status": "active",
+      "filename": "uotanstudio-boot-4824dc1f.md",
+      "relativePath": "documents/active/uotanstudio-boot-4824dc1f.md",
+      "sourcePaths": [
+        "UotanStudio.Net/Http/HttpDownload.cs",
+        "UotanStudio/Services/PatchPackages/RootPatchPackageService.cs",
+        "UotanStudio/Views/Shell/BootPatchWindow.axaml.cs",
+        "UotanStudio/Locale/LocaleKeySets.cs",
+        "UotanStudio.Tests/Net/HttpDownloadSourceOrderTests.cs",
+        "UotanStudio.Tests/Services/RootPatchPackageTests.cs"
+      ],
+      "sessionIds": [
+        "c9f061ce-0951-4e5e-92ae-9bb5a0694c46"
+      ],
+      "createdAt": "2026-10-28T13:36:58.928Z",
+      "updatedAt": "2026-10-28T13:36:58.928Z",
+      "lastAccessedAt": "2026-10-29T00:53:21.433Z",
+      "revision": 1,
+      "contentHash": "52449f37cf520186ab1dd92414b0bb01cffda15e9ad44d187491654a932b9f3f",
+      "sizeBytes": 5445,
+      "memoryBodyIds": []
+    },
+    {
+      "id": "1625ca1e-b4e4-4731-9cdf-933a93898b1b",
+      "title": "UotanStudio 烧录页 Root 修补接线（复用 Boot 补丁链路）",
+      "description": "烧录页 Root 修补接入 Boot 补丁后端链路：boot 分区自动检测、勾选后异步拉清单并测速、选版本即预下载校验、起刷在 prepared 字典上修补，含实测验证数字与未验证边界。",
+      "status": "active",
+      "filename": "uotanstudio-root-boot-1625ca1e.md",
+      "relativePath": "documents/active/uotanstudio-root-boot-1625ca1e.md",
+      "sourcePaths": [
+        "UotanStudio/ViewModels/Flash/FlashViewModel.Root.cs",
+        "UotanStudio/ViewModels/Flash/FlashViewModel.Operations.cs",
+        "UotanStudio/Locale/Common.resx",
+        "UotanStudio/Locale/LocaleKeySets.cs",
+        "UotanStudio.Tests/Flash/FlashRootPartitionTests.cs",
+        "VERIFICATION.md"
+      ],
+      "sessionIds": [
+        "2100d91b-0e58-4dae-93fc-6e4897edd35f"
+      ],
+      "createdAt": "2026-10-28T14:11:35.317Z",
+      "updatedAt": "2026-10-28T14:11:35.317Z",
+      "lastAccessedAt": "2026-10-31T18:49:18.171Z",
+      "revision": 1,
+      "contentHash": "cd8d0d116d51083620a862ff24e27b236cf497816d521758f10bd5c3d155032a",
+      "sizeBytes": 4890,
+      "memoryBodyIds": []
+    },
+    {
+      "id": "49ac1526-5aa6-4e33-8124-d8469eb37d45",
+      "title": "UotanStudio 全量门禁偶发：ADB 配对用例超时并连带取消无关用例（2026-10-29 实测）",
+      "description": "Release 全量门禁实测：断言 0 失败但 AdbRemoteProtocolTests.PairAsync_StatusFramedResult_IsAccepted 在满载并行下撞自身 15s 超时并连带取消一条无关用例；含复现比例、单跑对照、FINALNEWLINE 空白违规与配置切换复核。",
+      "status": "active",
+      "filename": "uotanstudio-adb-2026-10-29-49ac1526.md",
+      "relativePath": "documents/active/uotanstudio-adb-2026-10-29-49ac1526.md",
+      "sourcePaths": [
+        "UotanStudio.Tests/Protocols/AdbRemoteProtocolTests.cs",
+        "UotanStudio.Comm/Protocols/Adb",
+        "VERIFICATION.md",
+        "AGENTS.md"
+      ],
+      "sessionIds": [
+        "6bde3060-dfe2-4d3a-919f-9ecb8235e3d8"
+      ],
+      "createdAt": "2026-10-28T15:37:27.316Z",
+      "updatedAt": "2026-10-28T15:37:27.316Z",
+      "lastAccessedAt": "2026-10-28T16:09:40.973Z",
+      "revision": 1,
+      "contentHash": "5854630c0b79aba1c98c0e98dc92875cc65e4de8a6364599b512f8b3f7072947",
+      "sizeBytes": 4867,
+      "memoryBodyIds": []
+    },
+    {
+      "id": "1eda821d-1fe8-402c-9627-149b82049c6e",
+      "title": "UotanStudio 测试偶发失败定点排查：Progress<T> 异步投递与分配测量两类根因（2026-10-29 后续）",
+      "description": "全量门禁 7804 用例多轮复现后拆出的四条偶发线索：McpCancellation 进度竞态与 AudioPcmRingBuffer 分配测量的根因与修法、ADB 配对真实 30s 卡死（待加阶段名）、EROFS ambient 覆盖跨类干扰（待证明机制），含门禁数字与未验证边界。",
+      "status": "active",
+      "filename": "uotanstudio-progress-t-2026-10-29-1eda821d.md",
+      "relativePath": "documents/active/uotanstudio-progress-t-2026-10-29-1eda821d.md",
+      "sourcePaths": [
+        "UotanStudio.Tests/Protocols/AdbRemoteProtocolTests.cs",
+        "UotanStudio.Tests/Services/McpCancellationPropagationTests.cs",
+        "UotanStudio.Tests/Media/AudioPcmRingBufferTests.cs",
+        "UotanStudio.Media/Audio/AudioPcmRingBuffer.cs",
+        "UotanStudio.Tests/AGENTS.md"
+      ],
+      "sessionIds": [
+        "b341bbbd-2c2c-463d-8f04-f687eff97a06"
+      ],
+      "createdAt": "2026-10-28T16:10:00.266Z",
+      "updatedAt": "2026-10-28T16:10:00.266Z",
+      "lastAccessedAt": "2026-10-30T17:16:39.349Z",
+      "revision": 1,
+      "contentHash": "e701d360ac97e1df841c9a562dc59896030fa284c6b2947f0293a63c99d3770a",
+      "sizeBytes": 5793,
+      "memoryBodyIds": []
+    },
+    {
+      "id": "c16e6fe5-2b4b-470f-aa26-fe3efceb4f9b",
+      "title": "UotanStudio 烧录页售后包（IMAGES/RADIO）识别与刷写接入",
+      "description": "烧录页识别售后包目录（IMAGES+RADIO）并按分区列出镜像的规则与落点：照搬紫罗兰工具箱语义、RADIO 合并不重复、BLANK_GPT 清单过滤、fastboot 路由修正，含实测与未验证边界。",
+      "status": "active",
+      "filename": "uotanstudio-images-radio-c16e6fe5.md",
+      "relativePath": "documents/active/uotanstudio-images-radio-c16e6fe5.md",
+      "sourcePaths": [
+        "UotanStudio/Services/Flash/FlashAfterSalesPackage.cs",
+        "UotanStudio/Services/Flash/FlashManifestSelection.cs",
+        "UotanStudio/Services/Flash/FlashBinPackage.cs",
+        "UotanStudio/Services/Flash/FlashEdlBundleService.cs",
+        "UotanStudio/ViewModels/Flash/FlashViewModel.Operations.cs",
+        "UotanStudio.Tests/Flash/FlashAfterSalesPackageTests.cs",
+        "reference/VioletToolBox/VioletToolBox/oujiaflash.cs",
+        "reference/VioletToolBox/VioletToolBox/SuperMaker.cs"
+      ],
+      "sessionIds": [
+        "347b4b96-3d6c-4134-8175-f1d45020691c"
+      ],
+      "createdAt": "2026-10-28T17:09:07.689Z",
+      "updatedAt": "2026-10-28T17:09:07.689Z",
+      "lastAccessedAt": "2026-10-31T18:49:18.171Z",
+      "revision": 1,
+      "contentHash": "8481c1991927b982d7f8403a05f7519a4347eeef734850fbbbd1aa419c8646ac",
+      "sizeBytes": 6333,
+      "memoryBodyIds": []
+    },
+    {
+      "id": "d06fb307-a8f3-47c5-8055-6ac1f1ebb5a9",
+      "title": "烧录页刷机包类型分发：内容识别（CrAU 魔数/ZIP 载荷）与不支持类型显式报错",
+      "description": "UotanStudio 烧录页选包分发的判定顺序与依据：payload 改按 CrAU 魔数或 ZIP payload.bin 条目识别、保留 update.zip、未知类型报 Flash_UnsupportedPackage 并关闭刷写门控；含文件落点、设计取舍、实测与未验证边界。",
+      "status": "active",
+      "filename": "crau-zip-d06fb307.md",
+      "relativePath": "documents/active/crau-zip-d06fb307.md",
+      "sourcePaths": [
+        "UotanStudio/ViewModels/Flash/FlashViewModel.Operations.cs",
+        "UotanStudio/Services/Flash/FlashPayloadService.cs",
+        "UotanStudio.Firmware/OtaDelta/Payload/PayloadTool.cs",
+        "UotanStudio.Tests/Services/FlashPayloadServiceTests.cs",
+        "UotanStudio.Tests/Firmware/PayloadToolTests.cs",
+        "UotanStudio/Locale/Common.resx",
+        "UotanStudio/Locale/Common.zh-CN.resx",
+        "UotanStudio/Locale/LocaleKeySets.cs"
+      ],
+      "sessionIds": [
+        "471b7295-13ef-498b-a8ae-2106f1e1c802"
+      ],
+      "createdAt": "2026-10-28T18:24:06.310Z",
+      "updatedAt": "2026-10-28T18:24:06.310Z",
+      "lastAccessedAt": "2026-10-29T05:04:31.262Z",
+      "revision": 1,
+      "contentHash": "4c160e8f48b4b98e3345e09a7de6dc4af2aeebb25df39f5e73280fc877330513",
+      "sizeBytes": 5206,
+      "memoryBodyIds": []
+    },
+    {
+      "id": "7fd11d8c-2139-4784-a57d-567e1ccf0b07",
+      "title": "UotanStudio Root 修补清单预热与一次性测速（会话级缓存契约）",
+      "description": "Root 修补包：每个来源清单会话内只读一次、整会话只测速一次并固定最优源、启动预热与日志去重的契约变化、实测数字与未验证边界。",
+      "status": "active",
+      "filename": "uotanstudio-root-7fd11d8c.md",
+      "relativePath": "documents/active/uotanstudio-root-7fd11d8c.md",
+      "sourcePaths": [
+        "UotanStudio/Services/PatchPackages/RootPatchPackageService.cs",
+        "UotanStudio/ViewModels/Flash/FlashViewModel.Root.cs",
+        "UotanStudio/ViewModels/Flash/FlashViewModel.ViewBridge.cs",
+        "UotanStudio.Tests/Services/RootPatchPackageTests.cs",
+        "VERIFICATION.md"
+      ],
+      "sessionIds": [
+        "838e6630-b2fc-4f9f-aeb1-034ecf6c4e6c"
+      ],
+      "createdAt": "2026-10-29T00:32:37.542Z",
+      "updatedAt": "2026-10-29T00:32:37.542Z",
+      "lastAccessedAt": "2026-10-30T05:00:24.279Z",
+      "revision": 1,
+      "contentHash": "bcc9295f605a0f6cb5834bbe15b667f9626e4346a5d4f0af3e86453e5a411d34",
+      "sizeBytes": 4541,
+      "memoryBodyIds": []
+    },
+    {
+      "id": "97a7b3c2-55c7-4036-aaf9-a91b399a65c7",
+      "title": "瑞芯微存储介质真实对应与 cfg 字段边界（2026-11 复核）",
+      "description": "cfg 行不含存储介质字段的复核结论、分区列表只由可追溯来源填 StorageMedium、缺失镜像行仍列出但不可勾选，以及 RKDL UI 编号与协议 StorageIndex 错位（未改行为）的证据与未验证边界。",
+      "status": "active",
+      "filename": "cfg-2026-11-97a7b3c2.md",
+      "relativePath": "documents/active/cfg-2026-11-97a7b3c2.md",
+      "sourcePaths": [
+        "UotanStudio/Services/Flash/RockchipConfigFile.cs",
+        "UotanStudio/ViewModels/Flash/FlashViewModel.Rockchip.cs",
+        "UotanStudio/ViewModels/Flash/FlashViewModel.Operations.cs",
+        "UotanStudio.Tests/Services/RockchipConfigFileTests.cs",
+        "reference/rkdeveloptool/main.cpp",
+        "reference/rkdevtool/src-tauri/src/device_ops.rs"
+      ],
+      "sessionIds": [
+        "46ede7f1-51aa-40c8-8416-cd40f693e85a"
+      ],
+      "createdAt": "2026-10-29T00:44:41.706Z",
+      "updatedAt": "2026-10-29T00:44:41.706Z",
+      "lastAccessedAt": "2026-11-02T01:50:00.917Z",
+      "revision": 1,
+      "contentHash": "025f30797159925442d0047ccd7038ee268afae5427cc48230ed2c3c83782cfc",
+      "sizeBytes": 5519,
+      "memoryBodyIds": []
+    },
+    {
+      "id": "669d2f16-a028-4b5a-93d9-b65c804ac507",
+      "title": "RKDevTool cfg 尾块布局复核：存储掩码 @+4、行地址 @+8（2026-11 实测）",
+      "description": "以厂商样本逐字节 dump 更正 cfg 尾块布局（+4 存储位掩码 1=EMMC/2=SD/9=SPINOR、+8 u32 行地址），并记录 RockchipConfigFile/导入导出与测试的改动、旧 u64@+0 误读后果及未验证的 UI-协议编号错位边界。",
+      "status": "active",
+      "filename": "rkdevtool-cfg-4-8-2026-11-669d2f16.md",
+      "relativePath": "documents/active/rkdevtool-cfg-4-8-2026-11-669d2f16.md",
+      "sourcePaths": [
+        "UotanStudio/Services/Flash/RockchipConfigFile.cs",
+        "UotanStudio/ViewModels/Flash/FlashViewModel.Rockchip.cs",
+        "UotanStudio/ViewModels/Flash/FlashViewModel.Operations.cs",
+        "UotanStudio/ViewModels/Editors/RockchipConfigRowViewModel.cs",
+        "UotanStudio.Tests/Services/RockchipConfigFileTests.cs",
+        "reference/rkdeveloptool/main.cpp"
+      ],
+      "sessionIds": [
+        "ec7cbc46-448c-4a3f-8dc1-d3e64559cf6d"
+      ],
+      "createdAt": "2026-10-29T00:53:35.590Z",
+      "updatedAt": "2026-10-29T00:53:35.590Z",
+      "lastAccessedAt": "2026-11-01T06:38:44.668Z",
+      "revision": 1,
+      "contentHash": "66684beb3a8fe1c98198b2f94a8594f5c64030707c2ffd5a264793a5669320e0",
+      "sizeBytes": 5912,
+      "memoryBodyIds": []
+    },
+    {
+      "id": "ddf48211-0d95-453d-8cb2-cbe52b5588fa",
+      "title": "cfg 尾块未初始化字节：存储只认单 bit、勾选位 @+12（2026-11 实测修订）",
+      "description": "以 7 份真实 cfg 与 RKDevTool v2.96 截图比对修订 cfg 尾块语义：存储字仅接受单 bit（NormalizeStorage），未知掩码留空、+12 为勾选位，含厂商未初始化字节证据、EncodeField/头部冗余字段约束与验证结果。",
+      "status": "active",
+      "filename": "cfg-bit-12-2026-11-ddf48211.md",
+      "relativePath": "documents/active/cfg-bit-12-2026-11-ddf48211.md",
+      "sourcePaths": [
+        "UotanStudio/Services/Flash/RockchipConfigFile.cs",
+        "UotanStudio/ViewModels/Flash/FlashViewModel.Rockchip.cs",
+        "UotanStudio.Tests/Services/RockchipConfigFileTests.cs"
+      ],
+      "sessionIds": [
+        "45593ece-5cfe-485e-bde6-b28bbe0fcde9"
+      ],
+      "createdAt": "2026-10-29T02:16:43.286Z",
+      "updatedAt": "2026-10-29T02:16:43.286Z",
+      "lastAccessedAt": "2026-10-29T02:48:05.743Z",
+      "revision": 1,
+      "contentHash": "7e667020bc21496f9c93d7f986011bf9592fb5e23f32b7125af70bc75a22bc35",
+      "sizeBytes": 5311,
+      "memoryBodyIds": []
+    },
+    {
+      "id": "98898716-7e0b-4cb7-a1ac-6de1f9006a7b",
+      "title": "RKDevTool cfg 头部/行布局核验、字段约束与配置行导入策略（2026-11）",
+      "description": "29 字节头部（行数@22、重复长度@23、标记@27）与 610 字节行布局的逐字节核验，超长字段拒绝、空路径行可勾选、Parameter/Loader 行分类，以及地址未用于刷写、Parameter 路径未接通等未验证边界。",
+      "status": "active",
+      "filename": "rkdevtool-cfg-2026-11-98898716.md",
+      "relativePath": "documents/active/rkdevtool-cfg-2026-11-98898716.md",
+      "sourcePaths": [
+        "UotanStudio/Services/Flash/RockchipConfigFile.cs",
+        "UotanStudio/ViewModels/Flash/FlashViewModel.Rockchip.cs",
+        "UotanStudio/ViewModels/Flash/FlashViewModel.Operations.cs",
+        "UotanStudio.Tests/Services/RockchipConfigFileTests.cs",
+        "reference/rkdeveloptool/main.cpp"
+      ],
+      "sessionIds": [
+        "c72c8816-95f4-4c9d-b0b6-f3d54d57a0dd"
+      ],
+      "createdAt": "2026-10-29T02:22:24.652Z",
+      "updatedAt": "2026-10-29T02:22:24.652Z",
+      "lastAccessedAt": "2026-10-30T18:58:49.823Z",
+      "revision": 1,
+      "contentHash": "926ebbc4922e8d11f1c9cecc4702b728b16dd172ee643035d3b118e8e1777c58",
+      "sizeBytes": 7712,
+      "memoryBodyIds": []
+    },
+    {
+      "id": "5c6c0a82-a5ff-4954-91c3-d91e13b9a7b3",
+      "title": "RKDevTool cfg 尾块定案：+3 存储标记 'S'（RKDevTool.exe 反汇编证据，更正 +0 未知字结论）",
+      "description": "以 RKDevTool v2.96 二进制的读取/写出函数定案 cfg 尾块结构（+3 'S' 存储标记、+4 位掩码、+8 行地址、+12 勾选、+0..+2 填充），说明旧 cfg 空存储的成因、头部 +22/+23/+27 语义，记录 RockchipConfigFile 与测试改动及 51/51 验证与未验证边界。",
+      "status": "active",
+      "filename": "rkdevtool-cfg-3-s-rkdevtool-exe-0-5c6c0a82.md",
+      "relativePath": "documents/active/rkdevtool-cfg-3-s-rkdevtool-exe-0-5c6c0a82.md",
+      "sourcePaths": [
+        "UotanStudio/Services/Flash/RockchipConfigFile.cs",
+        "UotanStudio.Tests/Services/RockchipConfigFileTests.cs",
+        "UotanStudio/ViewModels/Flash/FlashViewModel.Rockchip.cs"
+      ],
+      "sessionIds": [
+        "48475515-de94-4b49-ba62-b1f0f5f0baac"
+      ],
+      "createdAt": "2026-10-29T02:48:47.837Z",
+      "updatedAt": "2026-10-29T02:48:47.837Z",
+      "lastAccessedAt": "2026-11-01T06:38:44.668Z",
+      "revision": 1,
+      "contentHash": "9722a0fcbc763c48fd91a114a8356d50881f9180113e19621bb98083125066a9",
+      "sizeBytes": 6726,
+      "memoryBodyIds": []
+    },
+    {
+      "id": "19fd2e72-2815-4c5f-a4ba-1ec06dc3ebea",
+      "title": "AVB VBMeta flags 切换与固件信息摘要移除（UotanStudio，2026）",
+      "description": "fastboot --disable-verity/--disable-verification 的位语义与字节级证据、AvbSigner.SetVbmetaFlagAsync 与既有 DisableVbmetaVerificationAsync 的差异、FirmwareInfo 视图按钮接线与 AVB 摘要移除理由、实测测试数字与未验证边界。",
+      "status": "active",
+      "filename": "avb-vbmeta-flags-uotanstudio-2026-19fd2e72.md",
+      "relativePath": "documents/active/avb-vbmeta-flags-uotanstudio-2026-19fd2e72.md",
+      "sourcePaths": [
+        "UotanStudio.Firmware/BootSecurity/Avb/Signing/AvbVbmetaFlags.cs",
+        "UotanStudio.Firmware/BootSecurity/Avb/AvbMetadataReader.cs",
+        "UotanStudio/ViewModels/Editors/FirmwareInfoViewModel.Metadata.cs",
+        "UotanStudio/ViewModels/Editors/FirmwareInfoViewModel.cs",
+        "UotanStudio/ViewModels/Editors/FileViewModel.cs",
+        "UotanStudio/Views/Editors/FirmwareInfoView.axaml",
+        "UotanStudio.Tests/Firmware/AvbVbmetaFlagTests.cs"
+      ],
+      "sessionIds": [
+        "fd5180fd-301a-4771-bc43-b2bd2cd8602d"
+      ],
+      "createdAt": "2026-10-29T03:58:20.647Z",
+      "updatedAt": "2026-10-29T03:58:20.647Z",
+      "lastAccessedAt": "2026-11-02T01:50:00.917Z",
+      "revision": 1,
+      "contentHash": "0fed1702ab2a77063a08c81910c475a966c26e0d3f033003475244bf7c7bb5ec",
+      "sizeBytes": 6926,
+      "memoryBodyIds": []
+    },
+    {
+      "id": "6327b2d2-fcf5-4560-a98e-b0189f7e48b6",
+      "title": "烧录面板 Field<T> 控件引用对齐：缺失控件通路的删除与验证（2026-11）",
+      "description": "FlashView 中不存在的控件引用已清零（43→0）：VerifyAfterFlashBox 删除后刷写恒 verify:false、EDL/MTK 只剩 USB 通路（新增 Flash_MtkSerialUnsupported）、NAND/UFS/preloader/RPMB 面板入口整体移除而设备层能力保留，附按行删除误裁活成员的恢复核对法与实测验证边界。",
+      "status": "active",
+      "filename": "field-t-2026-11-6327b2d2.md",
+      "relativePath": "documents/active/field-t-2026-11-6327b2d2.md",
+      "sourcePaths": [
+        "UotanStudio/ViewModels/Flash/FlashViewModel.Operations.cs",
+        "UotanStudio/Views/Shell/FlashView.axaml",
+        "UotanStudio/Views/Shell/FlashView.axaml.cs",
+        "UotanStudio/Locale/LocaleKeySets.cs"
+      ],
+      "sessionIds": [
+        "e126a136-c1cd-4f9b-9164-00b91a7e3a49"
+      ],
+      "createdAt": "2026-10-29T05:05:08.641Z",
+      "updatedAt": "2026-10-29T05:05:08.641Z",
+      "lastAccessedAt": "2026-11-01T23:52:28.646Z",
+      "revision": 1,
+      "contentHash": "865b3e38264d425a416d1e566187d4fdc777c7aa8a0d0f20a457b917657036e9",
+      "sizeBytes": 6573,
+      "memoryBodyIds": []
+    },
+    {
+      "id": "ab7361dd-103d-4b30-a478-4f97ccae5e4c",
+      "title": "UotanStudio Boot 修补模式解析与选项可见性规则（实测矩阵）",
+      "description": "BootPatchWindow 的 Auto 模式解析（LKM/KPM/GKI）、Magisk 各版本复选框可见性实测矩阵、KMI/超级密钥/ramdisk 门控规则与验证证据。",
+      "status": "active",
+      "filename": "uotanstudio-boot-ab7361dd.md",
+      "relativePath": "documents/active/uotanstudio-boot-ab7361dd.md",
+      "sourcePaths": [
+        "UotanStudio.Firmware/BootSecurity/Patcher/BootPatchCompatibility.cs",
+        "UotanStudio.Firmware/BootSecurity/Patcher/BootPatchService.cs",
+        "UotanStudio/Views/Shell/BootPatchWindow.axaml.cs",
+        "UotanStudio.Tests/Firmware/BootPatchModelsTests.cs",
+        "UotanStudio.Tests/Firmware/BootPatchModeTests.cs"
+      ],
+      "sessionIds": [
+        "dbb7b052-ae90-4fef-b2a8-f5ae902a9b75"
+      ],
+      "createdAt": "2026-10-30T05:00:35.472Z",
+      "updatedAt": "2026-10-30T05:00:35.472Z",
+      "lastAccessedAt": "2026-10-31T18:49:18.171Z",
+      "revision": 1,
+      "contentHash": "baf3babd67ba92ebbad10fec64fdfa6900d3a945460027d0eb81782c2bda0b25",
+      "sizeBytes": 5518,
+      "memoryBodyIds": []
+    },
+    {
+      "id": "4cf0b689-be12-4ab6-b574-db9d331f500a",
+      "title": "UotanStudio Flash 瑞芯微 loader 阶段切换、门控与全局日志路由（实测）",
+      "description": "Flash 面板瑞芯微 maskrom→loader 两阶段读取、loader 门控维度、cfg 导入行 Replace 语义、全局日志与 Comm 插桩的门禁实测与未验证边界。",
+      "status": "active",
+      "filename": "uotanstudio-flash-loader-4cf0b689.md",
+      "relativePath": "documents/active/uotanstudio-flash-loader-4cf0b689.md",
+      "sourcePaths": [
+        "UotanStudio/ViewModels/Flash/FlashViewModel.Rockchip.cs",
+        "UotanStudio/ViewModels/Flash/FlashDeviceUiPolicy.cs",
+        "UotanStudio/ViewModels/Flash/FlashViewModel.Gating.cs",
+        "UotanStudio/Services/LogService.cs",
+        "UotanStudio.Comm/Protocols/Bootrom/RkdlSession.cs",
+        "UotanStudio.Tests/Flash/FlashGlobalLogRoutingTests.cs"
+      ],
+      "sessionIds": [
+        "c359e0d6-5b60-4e35-b82b-a35a35564b14"
+      ],
+      "createdAt": "2026-10-30T17:16:59.382Z",
+      "updatedAt": "2026-10-30T17:16:59.382Z",
+      "lastAccessedAt": "2026-11-02T01:41:28.795Z",
+      "revision": 1,
+      "contentHash": "3eeaa89fea26432ff08b54883bd07429493485a2770d991a6211bd12b6f667d4",
+      "sizeBytes": 6074,
+      "memoryBodyIds": []
+    },
+    {
+      "id": "ac021ea4-1790-442d-9260-1e7ddf79ce40",
+      "title": "Flash 瑞芯微 loader/parameter 行的勾选校验与写入排除（实现记录）",
+      "description": "Flash 面板 loader 行可点选文件、勾选即 CRC 校验、parameter 行分区数校验，以及 IsWritableEntry 把特殊行排除出通用刷写路径（含 parameter 行空引用修复）与门禁实测、未验证边界。",
+      "status": "active",
+      "filename": "flash-loader-parameter-ac021ea4.md",
+      "relativePath": "documents/active/flash-loader-parameter-ac021ea4.md",
+      "sourcePaths": [
+        "UotanStudio/ViewModels/Flash/FlashViewModel.Operations.cs",
+        "UotanStudio/ViewModels/Flash/FlashViewModel.Rockchip.cs",
+        "UotanStudio/ViewModels/Flash/FlashViewModel.cs",
+        "UotanStudio.Tests/Flash/FlashRockchipFileRowTests.cs",
+        "VERIFICATION.md"
+      ],
+      "sessionIds": [
+        "adb14ccf-cf5e-4f43-a246-8f6d2f1a498d"
+      ],
+      "createdAt": "2026-10-30T18:59:02.667Z",
+      "updatedAt": "2026-10-30T18:59:02.667Z",
+      "lastAccessedAt": "2026-11-01T23:52:28.646Z",
+      "revision": 1,
+      "contentHash": "a28b801724164d831a88c9d985f58d4aa8d86e6fdfd0cdd56e7e190f27c18123",
+      "sizeBytes": 5520,
+      "memoryBodyIds": []
+    },
+    {
+      "id": "8c616b6b-70e5-4e10-82a9-0abdca53f5c4",
+      "title": "UotanStudio 烧录页日志重复根治：loader 结论单点归属与行内选文件抑制重查",
+      "description": "烧录页每次动作写两行相同日志的根因（结论被两条路径各写一遍）与修复不变量：loader 有效性单点报告、行内选文件抑制属性变化重查、行状态与日志同源；含有意行为变化、回归用例与实测/未验证边界。",
+      "status": "active",
+      "filename": "uotanstudio-loader-8c616b6b.md",
+      "relativePath": "documents/active/uotanstudio-loader-8c616b6b.md",
+      "sourcePaths": [
+        "UotanStudio/ViewModels/Flash/FlashViewModel.Rockchip.cs",
+        "UotanStudio/ViewModels/Flash/FlashViewModel.Operations.cs",
+        "UotanStudio/ViewModels/Flash/FlashViewModel.cs",
+        "UotanStudio/ViewModels/Flash/FlashDeviceUiPolicy.cs",
+        "UotanStudio.Tests/Flash/FlashRockchipFileRowTests.cs",
+        "VERIFICATION.md"
+      ],
+      "sessionIds": [
+        "1e6397a7-24b9-4b6c-a508-0b85c40b551a"
+      ],
+      "createdAt": "2026-10-31T16:49:33.141Z",
+      "updatedAt": "2026-10-31T16:49:33.141Z",
+      "lastAccessedAt": "2026-11-01T06:30:34.068Z",
+      "revision": 1,
+      "contentHash": "d1fe110b795b18c3da2e306042255ab450c31415c42e45a796380d27487e2ade",
+      "sizeBytes": 4374,
+      "memoryBodyIds": []
+    },
+    {
+      "id": "57625aaf-c24d-44d0-813b-1a5348c53631",
+      "title": "UotanStudio 本地化资源键登记约定与 Node_Family_* 动态拼键缺口",
+      "description": "本地化键三处同步（resx EN/ZH + LocaleKeySets）约定、字面量扫描对前缀拼键的盲区、15 个 Node_Family_* 族键补齐与回归测试落点、实测验证数字、未登记的 Flash_* 键缺口。",
+      "status": "active",
+      "filename": "uotanstudio-node-family-57625aaf.md",
+      "relativePath": "documents/active/uotanstudio-node-family-57625aaf.md",
+      "sourcePaths": [
+        "UotanStudio/Locale/Node.resx",
+        "UotanStudio/Locale/Node.zh-CN.resx",
+        "UotanStudio/Locale/LocaleKeySets.cs",
+        "UotanStudio/ViewModels/Nodes/NodeEditorViewModel.Toolbox.cs",
+        "UotanStudio/Workflow/Registry/NodeFactoryRegistrar.cs",
+        "UotanStudio/ViewModels/Flash/FlashViewModel.Operations.cs",
+        "UotanStudio/ViewModels/Flash/FlashViewModel.Rockchip.cs",
+        "UotanStudio.Tests/Services/NodeFactoryRegistrarTests.cs"
+      ],
+      "sessionIds": [
+        "a5c672b5-4643-4855-a1f3-0750907a65ee"
+      ],
+      "createdAt": "2026-10-31T18:49:38.941Z",
+      "updatedAt": "2026-10-31T18:49:38.941Z",
+      "lastAccessedAt": "2026-10-31T18:49:38.941Z",
+      "revision": 1,
+      "contentHash": "66b5ab7f3f0382e1f5f9ea8347ea58f8f8163ce6139678cab2bbad71821ead5a",
+      "sizeBytes": 6202,
+      "memoryBodyIds": []
+    },
+    {
+      "id": "0141cf6a-e8ce-44ca-a858-54a6c8c72dbb",
+      "title": "RKDL 会话对齐 rkdeveloptool：loader 下载、稀疏回放与官方存储表",
+      "description": "Rockchip RKDL 协议层补齐（RK28 ID block、厂商 RC4、LBA 64 loader 升级、稀疏回放）、端点重捕获修复、宿主发送引导与官方存储表显示、CRC-16/XMODEM，以及测试与未验证边界。",
+      "status": "active",
+      "filename": "rkdl-rkdeveloptool-loader-0141cf6a.md",
+      "relativePath": "documents/active/rkdl-rkdeveloptool-loader-0141cf6a.md",
+      "sourcePaths": [
+        "UotanStudio.Comm/Protocols/Bootrom/Rk28IdBlock.cs",
+        "UotanStudio.Comm/Protocols/Bootrom/RkdlRc4.cs",
+        "UotanStudio.Comm/Protocols/Bootrom/RkdlSession.LoaderUpgrade.cs",
+        "UotanStudio.Comm/Protocols/Bootrom/RkdlSession.Sparse.cs",
+        "UotanStudio.Hash/Crc16Xmodem/Crc16Xmodem.cs",
+        "UotanStudio/ViewModels/Flash/FlashViewModel.cs",
+        "VERIFICATION.md"
+      ],
+      "sessionIds": [
+        "69a01d75-0a3c-4800-920e-551ac0a8b21a"
+      ],
+      "createdAt": "2026-11-01T03:29:40.034Z",
+      "updatedAt": "2026-11-01T03:29:40.034Z",
+      "lastAccessedAt": "2026-11-02T05:28:07.185Z",
+      "revision": 1,
+      "contentHash": "10336445a8c82744630eefedea662cd41db2f6d5b73fdfde6477e93d74ada48a",
+      "sizeBytes": 5115,
+      "memoryBodyIds": []
+    },
+    {
+      "id": "7bfa005b-61f7-40f8-a0d8-4c81a9e001e8",
+      "title": "远程文件传输选型：SSH.NET + FluentFTP 的 NativeAOT 实测与火绒误报处置（2026-11）",
+      "description": "SSH.NET 2026.0.0 与 FluentFTP 55.1.0 的 NativeAOT 实测（0 裁剪警告、体积代价、依赖与许可）、SCP/host key 等陷阱、火绒 TrojanDownloader 误报的成因分层与处置优先级，以及 UotanStudio.Net 远程文件抽象的落点建议与未验证边界。",
+      "status": "active",
+      "filename": "ssh-net-fluentftp-nativeaot-2026-11-7bfa005b.md",
+      "relativePath": "documents/active/ssh-net-fluentftp-nativeaot-2026-11-7bfa005b.md",
+      "sourcePaths": [
+        "UotanStudio.Net/AGENTS.md",
+        "UotanStudio.Desktop/UotanStudio.Desktop.csproj",
+        "UotanStudio.Assets/Assets/manifest.tsv",
+        "VERIFICATION.md"
+      ],
+      "sessionIds": [
+        "6f90caf7-598f-40b4-b587-b948ea3c00d7"
+      ],
+      "createdAt": "2026-11-01T06:10:39.762Z",
+      "updatedAt": "2026-11-01T06:10:39.762Z",
+      "lastAccessedAt": "2026-11-01T06:10:39.762Z",
+      "revision": 1,
+      "contentHash": "dc28ec1c9b926761dc9757653522955f6a1456e2d178cecdcff08ee0f396ac97",
+      "sizeBytes": 8782,
+      "memoryBodyIds": []
+    },
+    {
+      "id": "f704c94a-fdd2-4686-b99d-8c228311d606",
+      "title": "RKDevTool v3.37 芯片信息展示逻辑与 RK3588 芯片名映射修复",
+      "description": "反编译 RKDevTool v3.37「读取 Chip 信息」执行链（sub_4197E0 只回显 Chip Tag、老家族 switch 表无 35xx）、UotanStudio GetChipName 的 8853→RK3588 修复与契约、门禁实测与未验证边界。",
+      "status": "active",
+      "filename": "rkdevtool-v3-37-rk3588-f704c94a.md",
+      "relativePath": "documents/active/rkdevtool-v3-37-rk3588-f704c94a.md",
+      "sourcePaths": [
+        "UotanStudio.Comm/Protocols/Bootrom/RkdlConstants.cs",
+        "UotanStudio.Tests/Protocols/RkdlModeClassificationTests.cs",
+        "VERIFICATION.md"
+      ],
+      "sessionIds": [
+        "7e7f4fb1-561e-4f4b-b09a-77e72a3b5373"
+      ],
+      "createdAt": "2026-11-01T06:31:00.311Z",
+      "updatedAt": "2026-11-01T06:31:00.311Z",
+      "lastAccessedAt": "2026-11-01T06:38:44.668Z",
+      "revision": 1,
+      "contentHash": "efb3e7639f83792eb9c5af7114cf28a4b1f50a1fac2868d67133b3f24743e806",
+      "sizeBytes": 5224,
+      "memoryBodyIds": []
+    },
+    {
+      "id": "b97660e0-b43a-4826-aa33-52b6fbc2039f",
+      "title": "RKDevTool v3.37 四个读取按钮执行链与 Chip Tag→型号推导定案（更正旧结论）",
+      "description": "反编译 RKDevTool v3.37 四个高级功能读取按钮（FlashID/FlashInfo/ChipInfo/Capability）的共同骨架、各自线上事务与回显换算，证明官方 -RK+倒序标签 的型号规则，并列出 RkdlSession 对齐点、不可还原边界与通用化待决项；更正 f704c94a 的 default 分支结论。",
+      "status": "active",
+      "filename": "rkdevtool-v3-37-chip-tag-b97660e0.md",
+      "relativePath": "documents/active/rkdevtool-v3-37-chip-tag-b97660e0.md",
+      "sourcePaths": [
+        "UotanStudio.Comm/Protocols/Bootrom/RkdlConstants.cs",
+        "UotanStudio.Comm/Protocols/Bootrom/RkdlSession.Commands.cs",
+        "UotanStudio.Comm/Protocols/Bootrom/RkdlSession.Transfer.cs",
+        "reference/rkdeveloptool/RKComm.cpp",
+        "reference/rkdevtool/src-tauri/src/device_ops.rs"
+      ],
+      "sessionIds": [
+        "4056be17-3c7e-400f-905b-d0ee55145d96"
+      ],
+      "createdAt": "2026-11-01T06:39:08.621Z",
+      "updatedAt": "2026-11-01T06:39:08.621Z",
+      "lastAccessedAt": "2026-11-01T06:39:08.621Z",
+      "revision": 1,
+      "contentHash": "593c64d01a70b141ea24a3de8ec1928da62974c68e9b098acc7e0b8125db25fc",
+      "sizeBytes": 7678,
+      "memoryBodyIds": []
+    },
+    {
+      "id": "79f5570c-d0a2-4cdb-a00f-88e062a47556",
+      "title": "瑞芯微 maskrom→usbplug 切换导致设备选中项跳到无关设备：选择保持修复与验证",
+      "description": "DeviceViewModel 扫描后按 Key 恢复选中、maskrom→usbplug 序列号/容器 ID 改写导致 GroupId 不匹配而回退 Devices[0]；选择保持（30s 窗口、唯一替代端点接管、TimeProvider 可测）设计、FlashViewModel loader 通道接入、测试数字与并行会话锁/编译错误等环境边界。",
+      "status": "active",
+      "filename": "maskrom-usbplug-79f5570c.md",
+      "relativePath": "documents/active/maskrom-usbplug-79f5570c.md",
+      "sourcePaths": [
+        "UotanStudio/ViewModels/Devices/DeviceViewModel.cs",
+        "UotanStudio/ViewModels/Flash/FlashViewModel.Rockchip.cs",
+        "UotanStudio.Comm/Protocols/Bootrom/RkdlConstants.cs",
+        "UotanStudio.Tests/Devices/DeviceSelectionHoldTests.cs",
+        "VERIFICATION.md"
+      ],
+      "sessionIds": [
+        "3df97d33-5939-4a43-897d-cc881b93b49a"
+      ],
+      "createdAt": "2026-11-02T00:56:28.019Z",
+      "updatedAt": "2026-11-02T00:56:28.019Z",
+      "lastAccessedAt": "2026-11-02T01:50:00.917Z",
+      "revision": 1,
+      "contentHash": "5294bb8deab9ab259e4a6bac8b118588d4ab30aef027e96b56e63dda22df7413",
+      "sizeBytes": 6223,
+      "memoryBodyIds": []
+    },
+    {
+      "id": "10a83a9a-0d60-45c3-a914-e4889ba4749c",
+      "title": "Flash 烧录页忙碌态控件启用策略：范围收窄到侧边操作区（UotanStudio）",
+      "description": "Flash 页 IsBusy 启用策略的根因、唯一名单 BusyDisabledControls、SetControlEnabled/SetBusy 的不变量、回归测试要求与验证记录；含构建期 pdb/apphost 文件锁的处理顺序。",
+      "status": "active",
+      "filename": "flash-uotanstudio-10a83a9a.md",
+      "relativePath": "documents/active/flash-uotanstudio-10a83a9a.md",
+      "sourcePaths": [
+        "UotanStudio/ViewModels/Flash/FlashDeviceUiPolicy.cs",
+        "UotanStudio/ViewModels/Flash/FlashViewModel.Gating.cs",
+        "UotanStudio/ViewModels/Flash/FlashViewModel.Operations.cs",
+        "UotanStudio/ViewModels/Flash/FlashViewModel.Root.cs",
+        "UotanStudio/Views/Shell/FlashView.axaml",
+        "UotanStudio.Tests/Flash/FlashDeviceUiPolicyTests.cs"
+      ],
+      "sessionIds": [
+        "8b9c88d9-eb8b-48e9-8a2f-9e6cd6e70046"
+      ],
+      "createdAt": "2026-11-02T01:10:57.416Z",
+      "updatedAt": "2026-11-02T01:10:57.416Z",
+      "lastAccessedAt": "2026-11-02T01:41:28.795Z",
+      "revision": 1,
+      "contentHash": "baf0c950dc9f442fde3896970c59046f6f764117dde8d0d2e09858efe5f2b95f",
+      "sizeBytes": 4877,
+      "memoryBodyIds": []
+    },
+    {
+      "id": "ffb7b67a-4d8f-4215-bc91-340492cba6b2",
+      "title": "Qualcomm 901D 诊断端口：从 EDL 误判到 diag 协议名与 Diagnostic 会话工厂",
+      "description": "0x901D 被误判为 EDL 的证据与修正：IsDiagPort 判定、diag 协议名、DiagnosticDeviceSessionFactory、宿主侧两处穷举映射补齐，含 273/273 协议测试、Devices 唯一无关失败与真机未验证边界。",
+      "status": "active",
+      "filename": "qualcomm-901d-edl-diag-diagnostic-ffb7b67a.md",
+      "relativePath": "documents/active/qualcomm-901d-edl-diag-diagnostic-ffb7b67a.md",
+      "sourcePaths": [
+        "UotanStudio.Comm/Devices/Classifiers/QualcommDiagPortClassifier.cs",
+        "UotanStudio.Comm/Devices/Services/Sessions/DefaultDeviceSessionFactories.cs",
+        "UotanStudio/Services/Devices/DeviceMonitorService.ControlledSessions.cs",
+        "UotanStudio.Tests/Devices/QualcommDiagPortClassifierTests.cs",
+        "UotanStudio.Tests/Devices/DeviceProtocolMappingTests.cs",
+        "reference/edl-bkerler/edl-master/edlclient/Config/usb_ids.py"
+      ],
+      "sessionIds": [
+        "ab9cd58c-0b41-4cd9-8861-ed663e11ca29"
+      ],
+      "createdAt": "2026-11-02T01:12:55.783Z",
+      "updatedAt": "2026-11-02T01:12:55.783Z",
+      "lastAccessedAt": "2026-11-02T01:12:55.783Z",
+      "revision": 1,
+      "contentHash": "de6900d4a35c56fa01832a09986b2053002223d0041c1ba4e778d3949705211d",
+      "sizeBytes": 5700,
+      "memoryBodyIds": []
+    },
+    {
+      "id": "24ce81b6-1a5a-4a89-be15-0fb27385a294",
+      "title": "Flash 页忙碌态门控补正：取消按钮归属、面板继承与处理器守卫审计（UotanStudio）",
+      "description": "更正 CancelFlashButton 不属于 AlwaysEnabledControls、忙碌名单的面板继承效应、无 _busy 守卫处理器清单、SetBusy 配对语义与验证/未验证边界；基线策略见文档 10a83a9a。",
+      "status": "active",
+      "filename": "flash-uotanstudio-24ce81b6.md",
+      "relativePath": "documents/active/flash-uotanstudio-24ce81b6.md",
+      "sourcePaths": [
+        "UotanStudio/ViewModels/Flash/FlashDeviceUiPolicy.cs",
+        "UotanStudio/ViewModels/Flash/FlashViewModel.Gating.cs",
+        "UotanStudio/ViewModels/Flash/FlashViewModel.Operations.cs",
+        "UotanStudio/Views/Shell/FlashView.axaml",
+        "UotanStudio/Views/Shell/FlashView.axaml.cs",
+        "UotanStudio.Tests/Flash/FlashDeviceUiPolicyTests.cs"
+      ],
+      "sessionIds": [
+        "a19f198d-95d8-49e5-bf32-ad5ec0614900"
+      ],
+      "createdAt": "2026-11-02T01:41:59.855Z",
+      "updatedAt": "2026-11-02T01:41:59.855Z",
+      "lastAccessedAt": "2026-11-02T01:41:59.855Z",
+      "revision": 1,
+      "contentHash": "0f6c8f21ef4bc3f9f1a1666aba6f670741c2686a875bce287323b6fbe412c064",
+      "sizeBytes": 6994,
+      "memoryBodyIds": []
+    }
+  ]
 }
