@@ -4,7 +4,7 @@
     "payload/runtime/memories.json": "247198257b611cd0b3713d7c4d25c16473fabdbfd020f4f24884fea63e37630a",
     "payload/runtime/USER.md": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "payload/runtime/MEMORY.md": "02491c45da3f20d8129ea4d6556f5b307a8ce0918fc70a73c2b43a4346f04a26",
-    "payload/documents/index.json": "466dbdf54cccd553044c45c4e3cd6f19b3d4cc8b4a4aa38708358cd911d1d149",
+    "payload/documents/index.json": "09811d8d91c7d5e56c0ea89f3847b9fcbadac374ccc0f0ec905d98e97ea938b0",
     "payload/documents/active/f2fs-gki-34836e58.md": "0d4feff482608731a641f31e489a65e61969e6afadba929aaf139123b594a8c8",
     "payload/documents/active/adb-hdc-2026-10-24-b1898c91.md": "5d66d397869753094e273a2c3982fb22890f4b848f59c8b5e4cd53e60511b43a",
     "payload/documents/active/ohscrcpy-ui-test-grpc-http2-ui-test-json-2026-10-fe4bd5e7.md": "1cfe7bd03ead72570e0d3e37ba0afb793cccd46fa24f9c0bbcf0e6240058424d",
@@ -86,6 +86,9 @@
     "payload/documents/active/flash-uotanstudio-10a83a9a.md": "9eafb60679f95c5ad792f36d0323f8994ba7be0ca731e85c45fca01bc50bb655",
     "payload/documents/active/qualcomm-901d-edl-diag-diagnostic-ffb7b67a.md": "b5cbaa60073430e18a9b12afa52ed47bf735e7d4d66845540803f77a21a1d2dd",
     "payload/documents/active/flash-uotanstudio-24ce81b6.md": "5943a97c56a4ae76fb5d6508e5d0b47e3aa62b8dce007fc8c58db618743245ee",
+    "payload/documents/active/usb-libwdi-2026-11-68e081ae.md": "477bb2b9cc466dacf03634a4936f2a5280a9a27d89d54b5842f4de6edf32a09d",
+    "payload/documents/active/fastboot-2026-11-08-c3555c30.md": "af35de6600a07af808855aba3c9505b57a891baa3fe4a7c71ae698c06befb437",
+    "payload/documents/active/scrcpy-could-not-connect-to-localabstract-server-89c8a790.md": "13d96688d27e67a0fec7464cb3f35f5cf7ad5d5f716ba9f056fcf520be47ba9b",
     "payload/data/.dsh-memory-bodies.json": "dc6020b75bab2ed6109193aea9c3427c22d9d2b6edd223c4c8c6cd87ad0c67dd"
   }
 }

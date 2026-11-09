@@ -2,10 +2,10 @@
   "format": "mnemonpack",
   "version": 1,
   "scope": "full",
-  "exportedAt": "2026-11-02T18:16:51.091Z",
+  "exportedAt": "2026-11-09T12:30:25.334Z",
   "source": {
     "plugin": "dsh-mnemon",
-    "pluginVersion": "0.5.38"
+    "pluginVersion": "0.5.42"
   },
   "components": [
     "runtime",
@@ -21,9 +21,9 @@
     },
     {
       "component": "documents",
-      "files": 82,
-      "bytes": 610437,
-      "items": 81
+      "files": 85,
+      "bytes": 632391,
+      "items": 84
     },
     {
       "component": "memory-spaces",
@@ -36,7 +36,7 @@
     "channel": "git",
     "branch": "mnemon-sync",
     "subdir": "mnemon/",
-    "pushedAt": "2026-11-02T18:16:51.091Z",
+    "pushedAt": "2026-11-09T12:30:25.334Z",
     "machine": {
       "id": "4cb76af2-6331-41a5-ba4c-fa41f7b2d1f6",
       "label": "MetaBook01",
